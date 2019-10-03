@@ -141,7 +141,6 @@
       "/actions/default/in/SkeletonLeftHand": "Skeleton (Left)",
       "/actions/default/in/SkeletonRightHand": "Skeleton (Right)",
       "/actions/default/in/Teleport": "Teleport",
-      "/actions/default/out/Haptic": "Haptic",
       "/actions/platformer/in/Jump": "Jump"
     }
   ]
