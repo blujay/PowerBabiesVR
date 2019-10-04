@@ -2665,7 +2665,7 @@ PrefabInstance:
     - target: {fileID: 114501696213753918, guid: fca9d4afb3743274e8f7da14019d7e0b,
         type: 3}
       propertyPath: _roomToJoinOnStart
-      value: PowerBabiesVR
+      value: test-throw
       objectReference: {fileID: 0}
     - target: {fileID: 4520454903943832, guid: fca9d4afb3743274e8f7da14019d7e0b, type: 3}
       propertyPath: m_LocalPosition.x
