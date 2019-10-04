@@ -272,6 +272,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &522354523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4194349361079340185, guid: 45f75fbfa91d4064e9fdee9e840b0c54,
+    type: 3}
+  m_PrefabInstance: {fileID: 582328673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &522354524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522354523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b547910ba1ace4dbd98a0dd2e4466c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decalPrefab: {fileID: 8361391583865417321, guid: 64f613e015367c34cabfe95c58eae9b7,
+    type: 3}
+  MinScale: 0.2
+  MaxScale: 1
 --- !u!1001 &582328673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -687,7 +709,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21336
+  m_Name: pb_Mesh21352
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1158,7 +1180,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 874ec5f200c7cc2448668460cf565241, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
