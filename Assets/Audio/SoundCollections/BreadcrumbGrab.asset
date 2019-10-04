@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3408340d50a4540bcb2e6d9dad190b, type: 3}
+  m_Name: BreadcrumbGrab
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 2cf5f37bbd7a6b840900f9f379f547f6, type: 3}
+  - {fileID: 8300000, guid: 05e0503cc3755074184eb12a7ecfe0c1, type: 3}
+  - {fileID: 8300000, guid: d8d595620ab665e47b504bcd3a5711ba, type: 3}
+  - {fileID: 8300000, guid: 4f661bf08d8a2a645b8d020727df9200, type: 3}
+  - {fileID: 8300000, guid: c2036e000ba73cc449919ed674e6c766, type: 3}
+  - {fileID: 8300000, guid: 9f414bfc100499e44aeea363c9d3f943, type: 3}
+  volumeMinValue: 0.6
+  volumeMaxValue: 1
+  pitchMinValue: 0.71
+  pitchMaxValue: 1.19

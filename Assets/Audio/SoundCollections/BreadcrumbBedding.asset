@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3408340d50a4540bcb2e6d9dad190b, type: 3}
+  m_Name: BreadcrumbBedding
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 904662dfad4cf9b44b57bb81a642894c, type: 3}
+  - {fileID: 8300000, guid: 04e4b6a9daaa9c943a976720a1ebff8a, type: 3}
+  - {fileID: 8300000, guid: 7618523b578b5a9459e3819eb6cac1ac, type: 3}
+  - {fileID: 8300000, guid: a7786b3440540dd43a424a48f1b864b7, type: 3}
+  - {fileID: 8300000, guid: 8cd2b4d4cfabf3c498b3f5fb0b662f53, type: 3}
+  volumeMinValue: 0.61
+  volumeMaxValue: 1.09
+  pitchMinValue: 0.78
+  pitchMaxValue: 1.09

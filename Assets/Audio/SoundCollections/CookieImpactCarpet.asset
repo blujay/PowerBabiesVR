@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3408340d50a4540bcb2e6d9dad190b, type: 3}
+  m_Name: CookieImpactCarpet
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 4d9cc7b4ca6a94a4a930165a97cf5d83, type: 3}
+  - {fileID: 8300000, guid: 74a8f3026062f2e4599a988032bb6b79, type: 3}
+  - {fileID: 8300000, guid: 2872dfdec049a3d48b9ecdbddd6dbf64, type: 3}
+  - {fileID: 8300000, guid: 81980d8788ec73d4385e381495e56a17, type: 3}
+  - {fileID: 8300000, guid: 1a34620dc881d3946b553d24a88cd561, type: 3}
+  volumeMinValue: 0.85
+  volumeMaxValue: 1
+  pitchMinValue: 0.77
+  pitchMaxValue: 1
