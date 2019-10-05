@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0b6cf4f855b6b0469c31dc33b0b2386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateEnterTime: 0
+  gameLength: 300
 --- !u!114 &321105974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +551,11 @@ PrefabInstance:
       propertyPath: _localPlayer.rightHand
       value: 
       objectReference: {fileID: 1557234158}
+    - target: {fileID: 114568985850100520, guid: fca9d4afb3743274e8f7da14019d7e0b,
+        type: 3}
+      propertyPath: _localAvatarPrefab
+      value: 
+      objectReference: {fileID: 107946, guid: 38bd7ddf7b75c854aac9d2e1e8e8126b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fca9d4afb3743274e8f7da14019d7e0b, type: 3}
 --- !u!114 &1396980194 stripped
