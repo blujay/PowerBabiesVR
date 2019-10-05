@@ -22,6 +22,7 @@ public class GameStates : RealtimeComponent
 
     public States CurrentState {
         set {
+            this.realtimeView.RequestOwnership();
             _model.state = value;
         }
         get {
