@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01fa5a88144daa446a0e204f30332a27, type: 3}
   m_Name: Splats
   m_EditorClassIdentifier: 
-  clips: []
-  volumeMinValue: 1
-  volumeMaxValue: 1
-  pitchMinValue: 1
-  pitchMaxValue: 1
+  clips:
+  - {fileID: 8300000, guid: 2172eecc569a8514c9aac3d2b3581302, type: 3}
+  - {fileID: 8300000, guid: 16ea9e96a83e75146b7d9f7cc7c79760, type: 3}
+  - {fileID: 8300000, guid: fe06cbaee04261f43bf4cb7a1b6e6576, type: 3}
+  - {fileID: 8300000, guid: ce8649adc8305e74bb96c86ad5426a1d, type: 3}
+  - {fileID: 8300000, guid: a37d5311477187945bf862515f2b922c, type: 3}
+  volumeMinValue: 1.54
+  volumeMaxValue: 0.8
+  pitchMinValue: 0.7
+  pitchMaxValue: 1.5
