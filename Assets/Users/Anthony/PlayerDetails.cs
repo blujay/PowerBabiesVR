@@ -7,12 +7,14 @@ public class PlayerDetails : RealtimeComponent
 	public string Identifier;
 
 	public PlayerDetailsSyncModel _model;
+	bool hasModel = false;
 
 	private PlayerDetailsSyncModel model
 	{
 		set
 		{
 			_model = value;
+			hasModel = true;
 
 			_model.name = Environment.UserName;
 
@@ -34,9 +36,7 @@ public class PlayerDetails : RealtimeComponent
 
 	private void Update ()
 	{
-		var view = GetComponent<RealtimeView> ();
-
-		if (view.isOwnedLocally)
+		if (hasModel)
 		{
 			if (Input.GetKeyDown (KeyCode.Space))
 			{
