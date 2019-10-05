@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3408340d50a4540bcb2e6d9dad190b, type: 3}
+  m_Name: CookieGrab
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 60883c499c174e84f9a8d147e8a6465a, type: 3}
+  - {fileID: 8300000, guid: b6c7b394a29f56842bc6d6b2d0c2e87a, type: 3}
+  - {fileID: 8300000, guid: 3d5a4c71f4d908845892e31ac94bf2e3, type: 3}
+  - {fileID: 8300000, guid: c0770f4b525690e47b6bf26a9777b06f, type: 3}
+  - {fileID: 8300000, guid: ae55cf32801185f478a0aa71af91b14f, type: 3}
+  volumeMinValue: 0.52
+  volumeMaxValue: 1
+  pitchMinValue: 0.73
+  pitchMaxValue: 1

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3408340d50a4540bcb2e6d9dad190b, type: 3}
+  m_Name: BreadcrumbCarpet
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: e031f194fef53aa44995012a695cd3eb, type: 3}
+  - {fileID: 8300000, guid: 9a1a070144299b44fa18db97b5ade64c, type: 3}
+  - {fileID: 8300000, guid: 5b1ba8783e0d3d444bd4f201199da911, type: 3}
+  - {fileID: 8300000, guid: 198b95fe224dd994aa2b2de3418788cc, type: 3}
+  - {fileID: 8300000, guid: ecca2239125177248bdb68aa757a900e, type: 3}
+  - {fileID: 8300000, guid: 91f8e57948618af47bc5d4bd83afaa61, type: 3}
+  volumeMinValue: 0.7
+  volumeMaxValue: 1
+  pitchMinValue: 0.76
+  pitchMaxValue: 1

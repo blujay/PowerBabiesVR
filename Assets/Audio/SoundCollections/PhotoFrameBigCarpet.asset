@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc3408340d50a4540bcb2e6d9dad190b, type: 3}
+  m_Name: PhotoFrameBigCarpet
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: d808a529983615a4db94da7228c3c78e, type: 3}
+  - {fileID: 8300000, guid: 55d38ea2ba08d594dbb7e3c0eb944361, type: 3}
+  - {fileID: 8300000, guid: 067de7f4f5a75de43ad5e3fc1d5ff64d, type: 3}
+  - {fileID: 8300000, guid: f2303d473eb63e3428acc97a713709fe, type: 3}
+  - {fileID: 8300000, guid: f308ff180de27e64b8f4d9799b15e0c9, type: 3}
+  volumeMinValue: 0.81
+  volumeMaxValue: 1
+  pitchMinValue: 0.84
+  pitchMaxValue: 1
