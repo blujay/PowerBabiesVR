@@ -8,6 +8,7 @@ public class PlayerDetails : RealtimeComponent
 
 	public PlayerDetailsSyncModel _model;
 	bool hasModel = false;
+	bool isLocal = false;
 
 	private PlayerDetailsSyncModel model
 	{
@@ -15,6 +16,7 @@ public class PlayerDetails : RealtimeComponent
 		{
 			_model = value;
 			hasModel = true;
+			isLocal = realtimeView.isOwnedLocally;
 
 			_model.name = Environment.UserName;
 
@@ -36,7 +38,7 @@ public class PlayerDetails : RealtimeComponent
 
 	private void Update ()
 	{
-		if (hasModel)
+		if (hasModel && isLocal)
 		{
 			if (Input.GetKeyDown (KeyCode.Space))
 			{
