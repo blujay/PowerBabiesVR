@@ -7,15 +7,16 @@ public class ProjectileGrabArea : MonoBehaviour
 {
     [SerializeField] BoxCollider GrabCollider;
     [SerializeField] GameObject ProjectileToGrab;
+    [SerializeField] GameObject Cam;
 
     [SerializeField] [Range(0, 1)] float PlayerHeightRatio;
 
-    Player player;
+    Player Player;
 
     // Start is called before the first frame update
     void Awake()
     {
-        player = GetComponent<Player>();
+        Player = GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -23,8 +24,8 @@ public class ProjectileGrabArea : MonoBehaviour
     {
         UpdateGrabAreaTransform();
 
-        TryGrab(player.leftHand);
-        TryGrab(player.rightHand);
+        TryGrab(Player.leftHand);
+        TryGrab(Player.rightHand);
     }
 
     void TryGrab (Hand hand)
@@ -32,8 +33,6 @@ public class ProjectileGrabArea : MonoBehaviour
         var handGrab = hand.GetGrabStarting(explicitType: GrabTypes.Pinch);
         if (handGrab == GrabTypes.None)
             return;
-
-        Debug.Log($"TRIGGER DETECTED {hand}");
 
         bool inGrabBounds = GrabCollider.bounds.Contains(hand.transform.position);
         if (!inGrabBounds)
@@ -46,13 +45,13 @@ public class ProjectileGrabArea : MonoBehaviour
     void UpdateGrabAreaTransform ()
     {
         var grabAreaScale = GrabCollider.size;
-        grabAreaScale.y = player.eyeHeight * PlayerHeightRatio;
+        grabAreaScale.y = Player.eyeHeight * PlayerHeightRatio;
         GrabCollider.size = grabAreaScale;
 
         var grabAreaPos = GrabCollider.transform.position;
-        grabAreaPos.x = player.feetPositionGuess.x;
+        grabAreaPos.x = Player.feetPositionGuess.x;
         grabAreaPos.y = grabAreaScale.y * 0.5f;
-        grabAreaPos.z = player.feetPositionGuess.z;
+        grabAreaPos.z = Player.feetPositionGuess.z;
         GrabCollider.transform.position = grabAreaPos;
     }
 }
