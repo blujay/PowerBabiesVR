@@ -35,13 +35,13 @@ public class PlayerDetailsUI : MonoBehaviour
 
 		if (CurrentlyFollowing != null)
 		{
-			UpdateName (CurrentlyFollowing.Details, CurrentlyFollowing.Details?.name ?? "-");
-			UpdateScore (CurrentlyFollowing.Details, CurrentlyFollowing.Details?.score ?? 0);
+			UpdateName (details.Details, details.Details?.name ?? "-");
+			UpdateScore (details.Details, details.Details?.score ?? 0);
 
-			if (CurrentlyFollowing.Details != null)
+			if (details.Details != null)
 			{
-				CurrentlyFollowing.Details.nameDidChange += UpdateName;
-				CurrentlyFollowing.Details.scoreDidChange += UpdateScore;
+				details.Details.nameDidChange += UpdateName;
+				details.Details.scoreDidChange += UpdateScore;
 			}
 		}
 		else
