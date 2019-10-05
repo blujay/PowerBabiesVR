@@ -20,29 +20,35 @@ public class PlayerDetailsUI : MonoBehaviour
 		}
 	}
 
-	private void StartFollowing (PlayerDetails details)
+	public void StartFollowing (PlayerDetails details)
 	{
-		if (CurrentlyFollowing.Details != null)
+		if (CurrentlyFollowing != null)
 		{
-			CurrentlyFollowing.Details.nameDidChange -= UpdateName;
-			CurrentlyFollowing.Details.scoreDidChange -= UpdateScore;
+			if (CurrentlyFollowing.Details != null)
+			{
+				CurrentlyFollowing.Details.nameDidChange -= UpdateName;
+				CurrentlyFollowing.Details.scoreDidChange -= UpdateScore;
+			}
 		}
 
 		CurrentlyFollowing = details;
 
-		if (CurrentlyFollowing.Details != null)
+		if (CurrentlyFollowing != null)
 		{
-			UpdateName (CurrentlyFollowing.Details, CurrentlyFollowing.Details.name);
-			UpdateScore (CurrentlyFollowing.Details, CurrentlyFollowing.Details.score);
+			UpdateName (CurrentlyFollowing.Details, CurrentlyFollowing.Details?.name ?? "-");
+			UpdateScore (CurrentlyFollowing.Details, CurrentlyFollowing.Details?.score ?? 0);
 
-			CurrentlyFollowing.Details.nameDidChange += UpdateName;
-			CurrentlyFollowing.Details.scoreDidChange += UpdateScore;
+			if (CurrentlyFollowing.Details != null)
+			{
+				CurrentlyFollowing.Details.nameDidChange += UpdateName;
+				CurrentlyFollowing.Details.scoreDidChange += UpdateScore;
+			}
 		}
 		else
 		{
 			if (Name != null)
 			{
-				Name.text = "-";
+				Name.text = "No Player";
 			}
 			if (Score != null)
 			{
@@ -55,7 +61,7 @@ public class PlayerDetailsUI : MonoBehaviour
 	{
 		if (Name != null)
 		{
-			Name.text = CurrentlyFollowing.Details.name;
+			Name.text = value ?? "-";
 		}
 	}
 
@@ -63,7 +69,7 @@ public class PlayerDetailsUI : MonoBehaviour
 	{
 		if (Score != null)
 		{
-			Score.text = value.ToString ();
+			Score.text = value.ToString();
 		}
 	}
 }

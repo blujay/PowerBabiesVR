@@ -1,5 +1,6 @@
 ﻿using Normal.Realtime;
 using System;
+using UnityEngine;
 
 public class PlayerDetails : RealtimeComponent
 {
@@ -11,13 +12,26 @@ public class PlayerDetails : RealtimeComponent
 	{
 		var realtimeView = GetComponent<RealtimeView> ();
 
-		Identifier = Convert.ToBase64String (realtimeView.sceneViewUUID);
+		Identifier = GetInstanceID().ToString();
 
 		PlayerList.DiscoverPlayer (this);
+
+		Details.name = Environment.UserName;
 	}
 
 	private void OnDestroy ()
 	{
 		PlayerList.ForgetPlayer (this);
+	}
+
+	private void Update()
+	{
+		if (realtimeView.isOwnedLocally)
+		{
+			if (Input.GetKeyDown (KeyCode.Space))
+			{
+				Details.name += 2;
+			}
+		}
 	}
 }
