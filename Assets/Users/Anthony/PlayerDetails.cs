@@ -20,16 +20,28 @@ public class PlayerDetails : RealtimeComponent
             if (isLocal)
             {
                 _model.name = Environment.UserName;
-            }            
+            }
     		PlayerList.DiscoverPlayer (this);
+            OnModelSet();
 		}
 	}
 
-	private void Start ()
+    private void OnModelSet()
+    {
+        _model.isReadyDidChange += OnPlayerReady;
+    }
+
+    private void OnPlayerReady(PlayerDetailsSyncModel model, bool value)
+    {
+        if (PlayerList.AllReady() && GameStates.instance) {
+            GameStates.instance.CurrentState = GameStates.States.Game;
+        }
+    }
+
+    private void Start ()
 	{
 		Identifier = Guid.NewGuid ().ToString ();
-
-		// _details = new PlayerDetailsSyncModel ();
+		
 	}
 
 	private void OnDestroy ()
