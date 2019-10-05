@@ -6,15 +6,15 @@ public class PlayerDetails : RealtimeComponent
 {
 	public string Identifier;
 
-	public PlayerDetailsSyncModel _details;
+	public PlayerDetailsSyncModel _model;
 
-	private PlayerDetailsSyncModel details
+	private PlayerDetailsSyncModel model
 	{
 		set
 		{
-			_details = value;
+			_model = value;
 
-			_details.name = Environment.UserName;
+			_model.name = Environment.UserName;
 
 			PlayerList.DiscoverPlayer (this);
 		}
@@ -40,7 +40,7 @@ public class PlayerDetails : RealtimeComponent
 		{
 			if (Input.GetKeyDown (KeyCode.Space))
 			{
-				_details.score += 2;
+				_model.score += 2;
 			}
 		}
 	}
