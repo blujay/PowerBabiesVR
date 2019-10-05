@@ -68,4 +68,9 @@ public class GameStates : RealtimeComponent
     {
         gameStateChanged.Invoke(value);
     }
+
+    public void PlayerReady() 
+    {
+        
+    }
 }
