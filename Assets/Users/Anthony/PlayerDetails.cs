@@ -6,17 +6,25 @@ public class PlayerDetails : RealtimeComponent
 {
 	public string Identifier;
 
-	public PlayerDetailsSyncModel Details;
+	public PlayerDetailsSyncModel _details;
+
+	private PlayerDetailsSyncModel details
+	{
+		set
+		{
+			_details = value;
+
+			_details.name = Environment.UserName;
+
+			PlayerList.DiscoverPlayer (this);
+		}
+	}
 
 	private void Start ()
 	{
-		Identifier = GetInstanceID().ToString();
+		Identifier = GetInstanceID ().ToString ();
 
-		Details = new PlayerDetailsSyncModel ();
-
-		Details.name = Environment.UserName;
-
-		PlayerList.DiscoverPlayer (this);
+		// _details = new PlayerDetailsSyncModel ();
 	}
 
 	private void OnDestroy ()
@@ -24,7 +32,7 @@ public class PlayerDetails : RealtimeComponent
 		PlayerList.ForgetPlayer (this);
 	}
 
-	private void Update()
+	private void Update ()
 	{
 		var view = GetComponent<RealtimeView> ();
 
@@ -32,7 +40,7 @@ public class PlayerDetails : RealtimeComponent
 		{
 			if (Input.GetKeyDown (KeyCode.Space))
 			{
-				Details.score += 2;
+				_details.score += 2;
 			}
 		}
 	}
