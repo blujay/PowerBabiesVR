@@ -6,17 +6,42 @@ public class PlayerDetails : RealtimeComponent
 {
 	public string Identifier;
 
-	public PlayerDetailsSyncModel Details;
+	public PlayerDetailsSyncModel _model;
+	bool hasModel = false;
+	bool isLocal = false;
 
-	private void Start ()
+	private PlayerDetailsSyncModel model
 	{
-		Identifier = GetInstanceID().ToString();
+		set
+		{
+			_model = value;
+			hasModel = true;
+			isLocal = realtimeView.isOwnedLocally;
+            if (isLocal)
+            {
+                _model.name = Environment.UserName;
+            }
+    		PlayerList.DiscoverPlayer (this);
+            OnModelSet();
+		}
+	}
 
-		Details = new PlayerDetailsSyncModel ();
+    private void OnModelSet()
+    {
+        _model.isReadyDidChange += OnPlayerReady;
+    }
 
-		Details.name = Environment.UserName;
+    private void OnPlayerReady(PlayerDetailsSyncModel model, bool value)
+    {
+        if (PlayerList.AllReady() && GameStates.instance) {
+            GameStates.instance.CurrentState = GameStates.States.Game;
+        }
+    }
 
-		PlayerList.DiscoverPlayer (this);
+    private void Start ()
+	{
+		Identifier = Guid.NewGuid ().ToString ();
+		
 	}
 
 	private void OnDestroy ()
@@ -24,15 +49,13 @@ public class PlayerDetails : RealtimeComponent
 		PlayerList.ForgetPlayer (this);
 	}
 
-	private void Update()
+	private void Update ()
 	{
-		var view = GetComponent<RealtimeView> ();
-
-		if (view.isOwnedLocally)
+		if (hasModel && isLocal)
 		{
 			if (Input.GetKeyDown (KeyCode.Space))
 			{
-				Details.score += 2;
+				_model.score += 2;
 			}
 		}
 	}

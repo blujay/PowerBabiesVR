@@ -33,26 +33,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!244 &-4116367732295710771
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: ab6e4471b9c48f747aa3d0ffb5850582
-  m_EffectName: Steam Audio Reverb
-  m_MixLevel: 15c1ae039bcaa0b499ac63958a5cf163
-  m_Parameters:
-  - m_ParameterName: Binaural
-    m_GUID: 3308c1740bdebaf489e828fded03df89
-  - m_ParameterName: Type
-    m_GUID: bb0f534b40a97284496742e679bb5f8d
-  - m_ParameterName: BypassAtInit
-    m_GUID: 9d96338aa8a39c94190c22819a82fe91
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!244 &-3506870288933386714
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -131,7 +111,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400002}
-  - {fileID: -4116367732295710771}
+  - {fileID: 5980578700772239761}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -183,10 +163,13 @@ AudioMixerSnapshotController:
     f7aab8027052a8e4bbbbfa3e10f77076: 1
     54a32c12472920747aadc169fc459833: 0.353
     c8aaa722d4ec4154bba4febdb24cb6a9: 0.5
+    cb5f8432cd552ad4384435a1c7974f72: 0
+    655f2852834a3064fac22049fa5d4631: 1.7477665
     5873537254a301f4ea13ed21b0eff333: 0.512
     f00e9382c178ba74091552a02191a248: 0.5
     58edbc339fee35e4396568ee4b4453de: 0.92
     ccd919438ea41b84a8839e71f708afbb: 0.336
+    48ce60537355d9f4cba1ddecbcddf1e9: -2.018036
     0a3224836f36e1a40a4ede80f5080595: 1
     d65515935f752c649a20a13490f2f9e0: 0
     03939eb341cc86440a3b7f811113cd27: 0.385
@@ -218,6 +201,7 @@ AudioMixerSnapshotController:
     e25db507e301b004f861dc06d09175f4: 130
     1a8948470036df943be2b94d699cf4e9: 95
     285e7a478d90a1f4ea39bf4e24e02ebf: 3.2656894
+    df091c47e59ef244dbb1c74e8ca4b12f: 1
     afbfe0879e482b64b9dd4ceeeed82492: 0.33
     ae6a7db7773ab66468e20795efab2e3e: 43
     c37752d75bf132d47a7c3a93049722dc: 1
@@ -225,6 +209,7 @@ AudioMixerSnapshotController:
     d26a4918d633cb54fbd7a5b40efe1639: 0.045
     bf51ba384a3c1f646a631feb6aed6c54: 114
     0f0fba6804dba4c4cb19fd30e1223afb: 2.87
+    758b508873b3f334f8b2547cdb8df826: 0
     c163fda8dac59764eba4c95707ac92b2: 0
     f4fa4509dbcb99d46a3b47fb214a8e04: 1
     56c841194b2fe3040b48cf98706d6e73: 0
@@ -260,6 +245,7 @@ AudioMixerSnapshotController:
     4cff19eb609afd84992763e1020b8181: 1
     554fcaeb37256b7409295198ed3a1888: 0
     a7077ffb091b65b4dbcb5026128b2c5e: -25
+    6e73b41cf2e158349850d814ee81da95: 0
     c6cc7e2c3e902d94abdabdddc5a41800: 1
     0177543cf46913a4a81f6ad290b75d09: 0
     2883db3c75b4127489b7549dabc871af: 0.67
@@ -293,12 +279,15 @@ AudioMixerSnapshotController:
     b3b0eede46f5b304ba700843076db719: 0.209
     141e6fde7f4d66a4d9ce1878b64dc199: -28
     b1ed842f163fcae4989e68a530e081fd: 0.47
+    85d5b42f78568564faf57ad7c43e08c8: 1
     1b16bf2faec4ce249a80ce7b9f1346bd: 0.406
     96bb113f992376e479fa8b09b724413d: 0.696
     29b9835ff985b2e4c97d9e4ee57e84b1: 0.415
     7ccabb5f18fe7824da14df39f37a68ec: 72
     0d4bed6fb113d6f4089b817171a98447: 1
+    37aa1fbf5497c4149aa4a852e8cb0771: 0
     d90c93cfc45013545b3760e70f40dd9c: 0.65
+    017017ef802bb2c4d96ae571e95b2b04: 1
   m_TransitionOverrides: {}
 --- !u!244 &2109566722700687120
 AudioMixerEffectController:
@@ -363,6 +352,24 @@ AudioMixerEffectController:
   m_EffectName: Attenuation
   m_MixLevel: b9ba0bad7eff44143855c4ec6373bd03
   m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &5980578700772239761
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: ff6ac5ea4ad0edc42a6df51ebb4b03a9
+  m_EffectName: Steam Audio Mixer Return
+  m_MixLevel: 39520ffa81c103246abe9e220abeddba
+  m_Parameters:
+  - m_ParameterName: Binaural
+    m_GUID: 85d5b42f78568564faf57ad7c43e08c8
+  - m_ParameterName: BypassAtInit
+    m_GUID: 758b508873b3f334f8b2547cdb8df826
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
