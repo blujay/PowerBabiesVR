@@ -10,6 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f35f1f49407b85f42a88836071c74878, type: 3}
-  m_Name: New Surface To Sound Collection
+  m_Name: WoodMatImpact
   m_EditorClassIdentifier: 
-  surfaceCollection: []
+  surfaceCollection:
+  - physicMaterial: {fileID: 13400000, guid: 2b9f59799d435b144a08c0559fc1db78, type: 2}
+    audio: {fileID: 11400000, guid: 2d094dc603e1ec442be664921d2589ca, type: 2}
+    audioMixerOutput: {fileID: 3959383398160937971, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+      type: 2}

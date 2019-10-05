@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01fa5a88144daa446a0e204f30332a27, type: 3}
   m_Name: WoodMatHit
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 0a6475188496fab43aeccfb9a1636216, type: 3}
+  - {fileID: 8300000, guid: ce0ade66d4b8aa14da47f1e7ee264a6d, type: 3}
+  - {fileID: 8300000, guid: 038ef6d039a08154f9337d4c18b3c9bb, type: 3}
+  - {fileID: 8300000, guid: 0da1ba46ebe0d6341ba4761360996450, type: 3}
   volumeMinValue: 1
-  volumeMaxValue: 1
-  pitchMinValue: 1
-  pitchMaxValue: 1
+  volumeMaxValue: 0.5
+  pitchMinValue: 1.3
+  pitchMaxValue: 0.7
