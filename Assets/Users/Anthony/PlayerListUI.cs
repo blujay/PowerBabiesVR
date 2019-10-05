@@ -4,7 +4,7 @@ public class PlayerListUI : MonoBehaviour
 {
 	public PlayerDetailsUIPool PlayerDetailsPool;
 
-	private void Start ()
+	private void Awake ()
 	{
 		UpdatePlayerList ();
 

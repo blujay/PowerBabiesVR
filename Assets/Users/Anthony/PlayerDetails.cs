@@ -10,13 +10,13 @@ public class PlayerDetails : RealtimeComponent
 
 	private void Start ()
 	{
-		var realtimeView = GetComponent<RealtimeView> ();
-
 		Identifier = GetInstanceID().ToString();
 
-		PlayerList.DiscoverPlayer (this);
+		Details = new PlayerDetailsSyncModel ();
 
 		Details.name = Environment.UserName;
+
+		PlayerList.DiscoverPlayer (this);
 	}
 
 	private void OnDestroy ()
@@ -26,11 +26,13 @@ public class PlayerDetails : RealtimeComponent
 
 	private void Update()
 	{
-		if (realtimeView.isOwnedLocally)
+		var view = GetComponent<RealtimeView> ();
+
+		if (view.isOwnedLocally)
 		{
 			if (Input.GetKeyDown (KeyCode.Space))
 			{
-				Details.name += 2;
+				Details.score += 2;
 			}
 		}
 	}
