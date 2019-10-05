@@ -17,9 +17,10 @@ public class PlayerDetails : RealtimeComponent
 			_model = value;
 			hasModel = true;
 			isLocal = realtimeView.isOwnedLocally;
-
-			_model.name = Environment.UserName;
-            
+            if (isLocal)
+            {
+                _model.name = Environment.UserName;
+            }            
     		PlayerList.DiscoverPlayer (this);
 		}
 	}
