@@ -12,6 +12,8 @@ public class ImpactSoundComponent : MonoBehaviour {
 	public void OnCollisionEnter (Collision collision)
 	{
 		objectSoundCollection.Play (collision.collider.sharedMaterial, audioSource);
+        Debug.Log("ImpactSoundComponent script works fine!");
+    }
 
-	}
+    
 }
