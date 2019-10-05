@@ -5,8 +5,10 @@ using Valve.VR.InteractionSystem;
 
 public class ProjectileGrabArea : MonoBehaviour
 {
-    [SerializeField] Collider GrabCollider;
+    [SerializeField] BoxCollider GrabCollider;
     [SerializeField] GameObject ProjectileToGrab;
+
+    [SerializeField] [Range(0, 1)] float PlayerHeightRatio;
 
     Player player;
 
@@ -19,17 +21,20 @@ public class ProjectileGrabArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var leftHandGrab = player.leftHand.GetGrabStarting(explicitType: GrabTypes.Grip);
-        if (leftHandGrab != GrabTypes.None)
-            TryGrab(player.leftHand);
+        UpdateGrabAreaTransform();
 
-        var rightHandGrab = player.rightHand.GetGrabStarting(explicitType: GrabTypes.Grip);
-        if (rightHandGrab != GrabTypes.None)
-            TryGrab(player.rightHand);
+        TryGrab(player.leftHand);
+        TryGrab(player.rightHand);
     }
 
     void TryGrab (Hand hand)
     {
+        var handGrab = hand.GetGrabStarting(explicitType: GrabTypes.Pinch);
+        if (handGrab == GrabTypes.None)
+            return;
+
+        Debug.Log($"TRIGGER DETECTED {hand}");
+
         bool inGrabBounds = GrabCollider.bounds.Contains(hand.transform.position);
         if (!inGrabBounds)
             return;
@@ -38,5 +43,16 @@ public class ProjectileGrabArea : MonoBehaviour
         Debug.Log($"GRABBING!!! {hand}");
     }
 
+    void UpdateGrabAreaTransform ()
+    {
+        var grabAreaScale = GrabCollider.size;
+        grabAreaScale.y = player.eyeHeight * PlayerHeightRatio;
+        GrabCollider.size = grabAreaScale;
 
+        var grabAreaPos = GrabCollider.transform.position;
+        grabAreaPos.x = player.feetPositionGuess.x;
+        grabAreaPos.y = grabAreaScale.y * 0.5f;
+        grabAreaPos.z = player.feetPositionGuess.z;
+        GrabCollider.transform.position = grabAreaPos;
+    }
 }
