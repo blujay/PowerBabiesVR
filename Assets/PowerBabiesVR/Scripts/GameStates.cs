@@ -1,29 +1,30 @@
-﻿using System.Collections;
+﻿using Normal.Realtime;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState : RealtimeComponent
+public class GameStates : RealtimeComponent
 {
 
-    public static GameState instance;
+    public static GameStates instance;
 
     private GameStateModel _model;
 
-    public enum State
+    public enum States
     {
         Loading,
         Lobby,
         Game
     }
 
-    public State CurrentState {
+    public States CurrentState {
         protected set;
         get;
     }
 
     void Awake()
     {
-        _model._state = State.Lobby;
+        _model._state = States.Lobby;
         instance = this;
     }
 

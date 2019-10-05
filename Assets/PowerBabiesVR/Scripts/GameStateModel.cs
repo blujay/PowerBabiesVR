@@ -7,7 +7,7 @@ using Normal.Realtime.Serialization;
 public class GameStateModel
 {
     [RealtimeProperty(1, true, true)]
-    public GameState.States _state;
+    public GameStates.States _state;
 
 }
 
