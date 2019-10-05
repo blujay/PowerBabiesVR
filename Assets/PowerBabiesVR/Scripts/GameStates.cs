@@ -71,6 +71,6 @@ public class GameStates : RealtimeComponent
 
     public void PlayerReady() 
     {
-        
+       
     }
 }
