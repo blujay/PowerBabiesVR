@@ -24,10 +24,10 @@ public class PlayerDetailsUI : MonoBehaviour
 	{
 		if (CurrentlyFollowing != null)
 		{
-			if (CurrentlyFollowing._model != null)
+			if (CurrentlyFollowing.model != null)
 			{
-				CurrentlyFollowing._model.nameDidChange -= UpdateName;
-				CurrentlyFollowing._model.scoreDidChange -= UpdateScore;
+				CurrentlyFollowing.model.nameDidChange -= UpdateName;
+				CurrentlyFollowing.model.scoreDidChange -= UpdateScore;
 			}
 		}
 
@@ -35,13 +35,13 @@ public class PlayerDetailsUI : MonoBehaviour
 
 		if (CurrentlyFollowing != null)
 		{
-			UpdateName (details._model, details._model?.name ?? "-");
-			UpdateScore (details._model, details._model?.score ?? 0);
+			UpdateName (details.model, details.model?.name ?? "-");
+			UpdateScore (details.model, details.model?.score ?? 0);
 
-			if (details._model != null)
+			if (details.model != null)
 			{
-				details._model.nameDidChange += UpdateName;
-				details._model.scoreDidChange += UpdateScore;
+				details.model.nameDidChange += UpdateName;
+				details.model.scoreDidChange += UpdateScore;
 			}
 		}
 		else

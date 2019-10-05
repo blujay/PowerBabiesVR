@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PlayerDetails : RealtimeComponent
 {
-	public string Identifier;
+    public string Identifier;
 
-	public PlayerDetailsSyncModel _model;
-	bool hasModel = false;
-	bool isLocal = false;
+    private PlayerDetailsSyncModel _model;
+    bool hasModel = false;
+    bool isLocal = false;
 
-	private PlayerDetailsSyncModel model
+	public PlayerDetailsSyncModel model
 	{
-		set
-		{
+        private set
+        {
 			_model = value;
 			hasModel = true;
 			isLocal = realtimeView.isOwnedLocally;
@@ -24,7 +24,11 @@ public class PlayerDetails : RealtimeComponent
     		PlayerList.DiscoverPlayer (this);
             OnModelSet();
 		}
-	}
+        get
+        {
+            return _model;
+        }
+    }
 
     private void OnModelSet()
     {
