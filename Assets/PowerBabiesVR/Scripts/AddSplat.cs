@@ -5,10 +5,11 @@ public class AddSplat : MonoBehaviour
 {
 
     public Transform decalPrefab;
-    public Rigidbody rb;
     public float VelocityThreshold = 0.1f;
     public float MinScale = .2f;
     public float MaxScale = 1f;
+
+    private Rigidbody rb;
 
     void Start()
     {
