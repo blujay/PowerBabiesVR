@@ -165,9 +165,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _realtime: {fileID: 1396980194}
   _sceneViewUUID: cf5f330f71ea2f4b8c4efe618bfca132
-  _sceneViewOwnedByCreatingClient: 1
+  _sceneViewOwnedByCreatingClient: 0
   _sceneViewPreventOwnershipTakeover: 0
-  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 0
   _isRootPrefabView: 0
   _components:
   - componentID: 1
