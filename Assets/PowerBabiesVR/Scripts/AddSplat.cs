@@ -1,4 +1,5 @@
 ﻿using kTools.Decals;
+using Pyro;
 using UnityEngine;
 
 public class AddSplat : MonoBehaviour
@@ -6,22 +7,18 @@ public class AddSplat : MonoBehaviour
 
     public Transform decalPrefab;
     public float VelocityThreshold = 0.1f;
+    public Color vfxColor = Color.red;
     public float MinScale = .2f;
     public float MaxScale = 1f;
 
     private Rigidbody rb;
+    private SplatParticles splatParticles;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        splatParticles = FindObjectOfType<SplatParticles>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     private void OnCollisionEnter(Collision other)
     {
@@ -33,5 +30,6 @@ public class AddSplat : MonoBehaviour
         decalTransform.localScale = Vector3.one * Random.Range(MinScale, MaxScale);
         var decal = decalTransform.GetComponent<Decal>();
         decal.SetData(decal.decalData);
+        splatParticles.Launch(hit.point, vfxColor);
     }
 }

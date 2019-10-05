@@ -240,6 +240,7 @@ MonoBehaviour:
   decalPrefab: {fileID: 8887538176815880712, guid: 65718eb3860b912408b9f88148307710,
     type: 3}
   VelocityThreshold: 0.1
+  vfxColor: {r: 0, g: 0.66519666, b: 1, a: 1}
   MinScale: 0.2
   MaxScale: 1
 --- !u!82 &478714087760140865
