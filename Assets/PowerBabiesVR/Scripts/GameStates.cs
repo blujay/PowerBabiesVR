@@ -26,7 +26,7 @@ public class GameStates : RealtimeComponent
             _model.state = value;
         }
         get {
-            return _model.state;
+            return ( _model != null ) ? _model.state : States.Loading;
         }
     }
 
@@ -62,7 +62,6 @@ public class GameStates : RealtimeComponent
 
     private void OnModelAttached()
     {
-        _model.state = States.Lobby;
     }
 
     private void StateDidChange(GameStateModel model, States value)
