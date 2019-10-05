@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fa5a88144daa446a0e204f30332a27, type: 3}
+  m_Name: HeartHitStuff
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: df70869b7baf7bb41be6890a85881cf9, type: 3}
+  - {fileID: 8300000, guid: 0b629379d69505e4f9f875ec13e2459a, type: 3}
+  - {fileID: 8300000, guid: 68aed12a5cfa9524a9df658781e6646c, type: 3}
+  - {fileID: 8300000, guid: fe46282044e762f41bb5d079b09b21a9, type: 3}
+  - {fileID: 8300000, guid: 2fb656e4a08422c428cf594a87912ed2, type: 3}
+  volumeMinValue: 0.7
+  volumeMaxValue: 1.3
+  pitchMinValue: 0.8
+  pitchMaxValue: 1.3
