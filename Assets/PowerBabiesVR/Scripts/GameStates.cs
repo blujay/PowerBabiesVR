@@ -11,6 +11,8 @@ public class GameStates : RealtimeComponent
 
     private GameStateModel _model;
 
+    public event Action<States> gameStateChanged;
+
     public enum States
     {
         Loading,
@@ -19,8 +21,12 @@ public class GameStates : RealtimeComponent
     }
 
     public States CurrentState {
-        protected set;
-        get;
+        set {
+            _model.state = value;
+        }
+        get {
+            return _model.state;
+        }
     }
 
     void Awake()
@@ -60,6 +66,6 @@ public class GameStates : RealtimeComponent
 
     private void StateDidChange(GameStateModel model, States value)
     {
-        
+        gameStateChanged.Invoke(value);
     }
 }
