@@ -234,8 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b547910ba1ace4dbd98a0dd2e4466c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decalPrefab: {fileID: 8361391583865417321, guid: 64f613e015367c34cabfe95c58eae9b7,
-    type: 3}
+  decalData: {fileID: 11400000, guid: a5d18cff63a029645a35a0ebd28da553, type: 2}
   VelocityThreshold: 0.1
   vfxColor: {r: 0.8113208, g: 0.18752226, b: 0.18752226, a: 1}
   MinScale: 0.2
