@@ -22,7 +22,7 @@ public class PlayerDetails : RealtimeComponent
 
 	private void Start ()
 	{
-		Identifier = GetInstanceID ().ToString ();
+		Identifier = Guid.NewGuid ().ToString ();
 
 		// _details = new PlayerDetailsSyncModel ();
 	}
