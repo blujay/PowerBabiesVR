@@ -13,7 +13,11 @@ public class GameStates : RealtimeComponent
 
     public event Action<States> gameStateChanged;
 
-    public enum States
+	public float stateEnterTime;
+
+	public float gameLength = 60 * 5;
+
+	public enum States
     {
         Loading,
         Lobby,
@@ -67,7 +71,22 @@ public class GameStates : RealtimeComponent
     private void StateDidChange(GameStateModel model, States value)
     {
         gameStateChanged.Invoke(value);
-    }
+		stateEnterTime = Time.realtimeSinceStartup;
+
+	}
+
+	private void Update()
+	{
+		if (CurrentState == States.Game)
+		{
+			if (Time.realtimeSinceStartup > stateEnterTime + gameLength)
+			{
+				// Every player is going to set the state to lobby,
+				// so this will fire multiple times. That should be fine, right?
+				CurrentState = States.Lobby;
+			}
+		}
+	}
 
     public void PlayerReady() 
     {
