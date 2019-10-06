@@ -77,6 +77,9 @@ public class PlayerDetails : RealtimeComponent
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (_model == null)
+            return;
+
         if (!isLocal)
         {
             return;
