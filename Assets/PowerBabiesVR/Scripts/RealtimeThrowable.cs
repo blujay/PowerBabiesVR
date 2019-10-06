@@ -10,7 +10,7 @@ using Normal.Realtime;
         private RealtimeView bill;
 
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             bob = gameObject.GetComponent<RealtimeTransform>();
             bill = gameObject.GetComponent<RealtimeView>();
@@ -18,6 +18,7 @@ using Normal.Realtime;
 
         public void Grabbed()
         {
+            Debug.Log("GRABB");
             bob.RequestOwnership();
             bill.RequestOwnership();
         }
