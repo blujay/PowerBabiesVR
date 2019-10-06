@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4206989679239315832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.036345452, y: 0.018797487, z: -0.027258575}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6969222635122203610}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _realtime: {fileID: 0}
-  _sceneViewUUID: fd655ee8f8d76e41b6e134aae7547f6b
+  _sceneViewUUID: 09fe22909584414f835342c14d92fd04
   _sceneViewOwnedByCreatingClient: 1
   _sceneViewPreventOwnershipTakeover: 0
   _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
@@ -309,17 +309,17 @@ PrefabInstance:
     - target: {fileID: 157312723835915991, guid: c562ca0e607c8f2419e16be1d7a74265,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1362351
+      value: 0.40553105
       objectReference: {fileID: 0}
     - target: {fileID: 157312723835915991, guid: c562ca0e607c8f2419e16be1d7a74265,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.17717375
+      value: 0.5273931
       objectReference: {fileID: 0}
     - target: {fileID: 157312723835915991, guid: c562ca0e607c8f2419e16be1d7a74265,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1362351
+      value: 0.40553105
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c562ca0e607c8f2419e16be1d7a74265, type: 3}
