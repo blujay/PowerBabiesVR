@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ClockView : MonoBehaviour
 {
-    //Transform ClockHand;
+    [SerializeField] GameCountdown countdown;
+    [SerializeField] Transform clockHand;
 
     void Start()
     {

@@ -976,6 +976,11 @@ PrefabInstance:
       propertyPath: buttonUp
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5415235284964549873, guid: 16c15cc6c8161b64c9b49caff864b9e0,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cd7a556426b632a43be5d9ec1e925182, type: 3}
     - target: {fileID: 3286707896425327825, guid: 16c15cc6c8161b64c9b49caff864b9e0,
         type: 3}
       propertyPath: m_Mesh
