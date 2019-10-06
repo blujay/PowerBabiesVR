@@ -12,6 +12,14 @@ public class PositionOnSpawn : MonoBehaviour
     {
         realtime.didConnectToRoom += OnConnectedToRoom;
         realtime.didDisconnectFromRoom += OnDisconnectedFromRoom;
+
+        Application.wantsToQuit += OnWantsToQuit;
+    }
+
+    private bool OnWantsToQuit()
+    {
+        SpawnPositions.instance.ReturnPosition(realtime.clientID);
+        return true;
     }
 
     private void OnDisconnectedFromRoom(Realtime realtime)
@@ -21,6 +29,8 @@ public class PositionOnSpawn : MonoBehaviour
 
     private void OnConnectedToRoom(Realtime realtime)
     {
-        SpawnPositions.instance.CheckoutPosition(realtime.clientID);
+        Transform spawnPoint = SpawnPositions.instance.CheckoutPosition(realtime.clientID);
+        transform.position = spawnPoint.position;
+        transform.rotation = spawnPoint.rotation;
     }
 }
