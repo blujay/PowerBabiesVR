@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: wall-window-door
+  m_Name: wall-shelf
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _DETAIL_MULX2 _GLOSSYREFLECTIONS_OFF _NORMALMAP _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 082dacf0ea4a65a4d874546670f1b0fe, type: 3}
+        m_Texture: {fileID: 2800000, guid: d4ce12eb6050ff44fb39c3a8f2900b8d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8509804, g: 0.84313726, b: 0.84313726, a: 1}
+    - _Color: {r: 0.8490566, g: 0.84505165, b: 0.84505165, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
