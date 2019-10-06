@@ -21,6 +21,8 @@ public class PositionOnSpawn : MonoBehaviour
 
     private void OnConnectedToRoom(Realtime realtime)
     {
-        SpawnPositions.instance.CheckoutPosition(realtime.clientID);
+        Transform spawnPoint = SpawnPositions.instance.CheckoutPosition(realtime.clientID);
+        transform.position = spawnPoint.position;
+        transform.rotation = spawnPoint.rotation;
     }
 }
