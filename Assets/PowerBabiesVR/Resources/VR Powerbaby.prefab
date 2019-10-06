@@ -389,7 +389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4565284463160694021}
-  realtimeTransform: {fileID: 165299398615266193}
 --- !u!1 &1573471737031190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1141,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8842936955766150924, guid: 6d4e72f14ce1ac24e9f323885a46ad79, type: 3}
+    - {fileID: 7657899203495882442, guid: 6d4e72f14ce1ac24e9f323885a46ad79, type: 3}
+    - {fileID: 6413545987802036649, guid: 6d4e72f14ce1ac24e9f323885a46ad79, type: 3}
+    - {fileID: 920183709870898274, guid: 6d4e72f14ce1ac24e9f323885a46ad79, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6d4e72f14ce1ac24e9f323885a46ad79, type: 3}
 --- !u!4 &8123939570184531190 stripped
 Transform:
