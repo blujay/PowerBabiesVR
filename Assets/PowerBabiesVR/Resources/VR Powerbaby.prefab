@@ -966,27 +966,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -91.00201
       objectReference: {fileID: 0}
-    - target: {fileID: 33547262792306705, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 33547262792306705, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 33547262792306705, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 33547262792306719, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 33547262792306716, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1719,27 +1699,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -91.00201
       objectReference: {fileID: 0}
-    - target: {fileID: 33547262792306705, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 33547262792306705, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 33547262792306705, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 33547262792306719, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 33547262792306716, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
         type: 3}
       propertyPath: m_Mesh
       value: 

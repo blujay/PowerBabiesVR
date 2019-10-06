@@ -21,6 +21,14 @@ public class GameCountdown : MonoBehaviour
         stateEnterTime = Time.realtimeSinceStartup;
     }
 
+    public float GetTimeElapsed() {
+        return (Time.realtimeSinceStartup - stateEnterTime);
+    }
+
+    public float GetTimeElapsedNormalized() {
+        return Mathf.Clamp01( GetTimeElapsed() / gameLength );
+    }
+
     private void Update ()
 	{
 		if (GameStates.instance == null || GameStates.instance.CurrentState != GameStates.States.Game)
