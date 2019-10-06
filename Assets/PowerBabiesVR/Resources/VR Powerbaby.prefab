@@ -315,11 +315,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _realtime: {fileID: 0}
-  _sceneViewUUID: d191e0a1602905469dd2530911993bf9
+  _sceneViewUUID: 
   _sceneViewOwnedByCreatingClient: 1
   _sceneViewPreventOwnershipTakeover: 0
   _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
-  _isRootPrefabView: 0
+  _isRootPrefabView: 1
   _components:
   - componentID: 1
     component: {fileID: 114800176784454794}
@@ -1241,6 +1241,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5415235284964549873, guid: 16c15cc6c8161b64c9b49caff864b9e0,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cd7a556426b632a43be5d9ec1e925182, type: 3}
     - target: {fileID: 3286707898350275855, guid: 16c15cc6c8161b64c9b49caff864b9e0,
         type: 3}
       propertyPath: m_Mesh
@@ -1251,11 +1256,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5415235284964549873, guid: 16c15cc6c8161b64c9b49caff864b9e0,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cd7a556426b632a43be5d9ec1e925182, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16c15cc6c8161b64c9b49caff864b9e0, type: 3}
 --- !u!114 &3250460325666377526 stripped
