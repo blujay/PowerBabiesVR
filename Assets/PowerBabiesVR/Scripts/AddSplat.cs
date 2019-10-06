@@ -14,10 +14,12 @@ public class AddSplat : MonoBehaviour
     private Rigidbody rb;
     private SplatParticles splatParticles;
 
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
         splatParticles = FindObjectOfType<SplatParticles>();
+
     }
 
     private void OnCollisionEnter(Collision other)
@@ -32,11 +34,7 @@ public class AddSplat : MonoBehaviour
             Vector2.one * Random.Range(MinScale, MaxScale),
             decalData, true
         );
-//        decal.SetActive(true);
-//        Transform decalTransform = Instantiate(decalPrefab, hit.point, Quaternion.identity);
-//        decalTransform.localRotation = Quaternion.LookRotation(hit.normal);
-//        decalTransform.localScale = Vector3.one * Random.Range(MinScale, MaxScale);
-//        var decal = decalTransform.GetComponent<Decal>();
+
         splatParticles.Launch(hit.point, vfxColor);
     }
 }
