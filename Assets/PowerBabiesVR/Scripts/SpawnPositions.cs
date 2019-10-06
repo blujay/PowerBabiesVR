@@ -12,6 +12,12 @@ public class SpawnPositions : RealtimeComponent
 
     SpawnSlotsModel _model;
 
+    private SpawnSlotsModel model {
+        set {
+            _model = value;
+        }
+    }
+
     public static SpawnPositions instance {
         protected set;
         get;
@@ -27,7 +33,7 @@ public class SpawnPositions : RealtimeComponent
     {
         int freeIndex = -1;
         for (int i = 0; i < spawnPosition.Length; i++) {
-            bool free = ( (_model.slotsUsed >> i) & 1 ) == 1;
+            bool free = ( (_model.slotsUsed >> i) & 1 ) == 0;
             if (free) {
                 freeIndex = i;
                 break;
@@ -40,6 +46,9 @@ public class SpawnPositions : RealtimeComponent
         }
 
         checkedOutPositions[clientID] = freeIndex;
+
+        realtimeView.RequestOwnership();
+
         _model.slotsUsed |= ( 1 << freeIndex ) ;
 
         return spawnPosition[freeIndex];
@@ -47,7 +56,12 @@ public class SpawnPositions : RealtimeComponent
 
     public void ReturnPosition(int clientID) 
     {
+        if (!checkedOutPositions.ContainsKey(clientID)) {
+            return;
+        }
+        realtimeView.RequestOwnership();
         int slot = checkedOutPositions[clientID];
+        checkedOutPositions.Remove(clientID);
         _model.slotsUsed &= ~(1 << slot);
     }
 
