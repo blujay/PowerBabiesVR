@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameStates : RealtimeComponent
 {
@@ -13,9 +14,8 @@ public class GameStates : RealtimeComponent
 
     public event Action<States> gameStateChanged;
 
-	public float stateEnterTime;
-
-	public float gameLength = 60 * 5;
+    [SerializeField] UnityEvent StartGameEvent;
+    [SerializeField] UnityEvent StartLobbyEvent;
 
 	public enum States
     {
@@ -27,16 +27,9 @@ public class GameStates : RealtimeComponent
     public States CurrentState {
         set {
             this.realtimeView.RequestOwnership();
-
-			bool fireReset = value == States.Lobby
-				&& _model.state != States.Lobby;
-
+			
 			_model.state = value;
 
-			if (fireReset)
-			{
-				ResetGameForLobby ();
-			}
 		}
         get {
             return ( _model != null ) ? _model.state : States.Loading;
@@ -88,21 +81,9 @@ public class GameStates : RealtimeComponent
     private void StateDidChange(GameStateModel model, States value)
     {
         gameStateChanged.Invoke(value);
-		stateEnterTime = Time.realtimeSinceStartup;
-
-	}
-
-	private void Update()
-	{
-		if (CurrentState == States.Game)
-		{
-			if (Time.realtimeSinceStartup > stateEnterTime + gameLength)
-			{
-				// Every player is going to set the state to lobby,
-				// so this will fire multiple times. That should be fine, right?
-				CurrentState = States.Lobby;
-			}
-		}
+		if (value == States.Lobby) {
+            ResetGameForLobby();
+        }
 	}
 
     public void PlayerReady() 
