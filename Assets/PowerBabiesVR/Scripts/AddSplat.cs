@@ -1,6 +1,7 @@
 ﻿using kTools.Decals;
 using Pyro;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class AddSplat : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class AddSplat : MonoBehaviour
         float velocity = hit.thisCollider.attachedRigidbody.velocity.magnitude;
         if (velocity < VelocityThreshold) return;
         if (Time.time - LastDecalTime < ElapsedTimeThreshold) return;
+        if (hit.otherCollider.gameObject.GetComponent<Throwable>() != null) return;
+        if (hit.otherCollider.gameObject.tag == "splatproof") return;
         LastDecalTime = Time.time;
         Decal decal = DecalSystem.GetDecal(
             hit.point,
