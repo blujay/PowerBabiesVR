@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerDetails : RealtimeComponent
 {
-    public string Identifier;
-
     private PlayerDetailsSyncModel _model;
     bool hasModel = false;
     bool isLocal = false;
@@ -20,6 +18,21 @@ public class PlayerDetails : RealtimeComponent
             if (isLocal)
             {
                 _model.name = Environment.UserName;
+
+				if (GameStates.instance != null)
+				{
+					GameStates.instance.gameStateChanged += state =>
+					{
+						if (state == GameStates.States.Lobby)
+						{
+							_model.score = 0;
+						}
+					};
+				}
+				else
+				{
+					Debug.LogError ("<b>Anthony:</b> GameState singleton is null!");
+				}
             }
     		PlayerList.DiscoverPlayer (this);
             OnModelSet();
@@ -41,12 +54,6 @@ public class PlayerDetails : RealtimeComponent
             GameStates.instance.CurrentState = GameStates.States.Game;
         }
     }
-
-    private void Start ()
-	{
-		Identifier = Guid.NewGuid ().ToString ();
-		
-	}
 
 	private void OnDestroy ()
 	{
