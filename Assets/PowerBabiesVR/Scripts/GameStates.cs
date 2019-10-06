@@ -27,16 +27,9 @@ public class GameStates : RealtimeComponent
     public States CurrentState {
         set {
             this.realtimeView.RequestOwnership();
-
-			bool fireReset = value == States.Lobby
-				&& _model.state != States.Lobby;
-
+			
 			_model.state = value;
 
-			if (fireReset)
-			{
-				ResetGameForLobby ();
-			}
 		}
         get {
             return ( _model != null ) ? _model.state : States.Loading;
@@ -89,7 +82,9 @@ public class GameStates : RealtimeComponent
     {
         gameStateChanged.Invoke(value);
 		stateEnterTime = Time.realtimeSinceStartup;
-
+        if (value == States.Lobby) {
+            ResetGameForLobby();
+        }
 	}
 
 	private void Update()
