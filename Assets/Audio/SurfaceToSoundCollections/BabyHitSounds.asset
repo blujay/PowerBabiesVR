@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35f1f49407b85f42a88836071c74878, type: 3}
+  m_Name: BabyHitSounds
+  m_EditorClassIdentifier: 
+  surfaceCollection:
+  - physicMaterial: {fileID: 13400000, guid: 4be2af5a0c858d34c932953ddf039100, type: 2}
+    audio: {fileID: 11400000, guid: c8f715e2922a0f5458315ad7cef0ecde, type: 2}
+    audioMixerOutput: {fileID: 2383681588888174095, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+      type: 2}
+  - physicMaterial: {fileID: 13400000, guid: 746d6c07f9b5b31468ae26c7ecb41b59, type: 2}
+    audio: {fileID: 11400000, guid: c8f715e2922a0f5458315ad7cef0ecde, type: 2}
+    audioMixerOutput: {fileID: 2383681588888174095, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+      type: 2}
+  - physicMaterial: {fileID: 13400000, guid: 2b9f59799d435b144a08c0559fc1db78, type: 2}
+    audio: {fileID: 11400000, guid: c8f715e2922a0f5458315ad7cef0ecde, type: 2}
+    audioMixerOutput: {fileID: 2383681588888174095, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+      type: 2}
+  - physicMaterial: {fileID: 13400000, guid: 20b27a2b09cf5470e866c2708f9f9dc8, type: 2}
+    audio: {fileID: 11400000, guid: c8f715e2922a0f5458315ad7cef0ecde, type: 2}
+    audioMixerOutput: {fileID: 2383681588888174095, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+      type: 2}
+  - physicMaterial: {fileID: 13400000, guid: 948611cc428a84b569ad7626e6649205, type: 2}
+    audio: {fileID: 11400000, guid: c8f715e2922a0f5458315ad7cef0ecde, type: 2}
+    audioMixerOutput: {fileID: 2383681588888174095, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+      type: 2}
+  - physicMaterial: {fileID: 13400000, guid: 4be2af5a0c858d34c932953ddf039100, type: 2}
+    audio: {fileID: 11400000, guid: c8f715e2922a0f5458315ad7cef0ecde, type: 2}
+    audioMixerOutput: {fileID: 2383681588888174095, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+      type: 2}
+  - physicMaterial: {fileID: 13400000, guid: 0aa34d7d628bdb04082aa16112cc8fd1, type: 2}
+    audio: {fileID: 11400000, guid: c8f715e2922a0f5458315ad7cef0ecde, type: 2}
+    audioMixerOutput: {fileID: 2383681588888174095, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+      type: 2}
