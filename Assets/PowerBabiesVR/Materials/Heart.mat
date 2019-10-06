@@ -108,7 +108,7 @@ Material:
     - _Parallax: 0.02
     - _Power: 1.81
     - _Powerexponent: 1
-    - _Pulseamplitude: 66
+    - _Pulseamplitude: 1
     - _Pulsefrequency: 10
     - _Pulseoffset: 0
     - _Pulsephase: 0
