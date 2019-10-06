@@ -20,10 +20,10 @@ TagManager:
   - Post-processing
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - EnemyThrowable
+  - PlayerThrowable
+  - EnemyCollider
+  - PlayerCollider
   - 
   - 
   - 

@@ -51,9 +51,6 @@ public class ProjectileGrabArea : MonoBehaviour
         if (!inGrabBounds)
             return;
 
-        // grabbing code
-        Debug.Log($"GRABBING!!! {hand}");
-
         NextThrowable.gameObject.SetActive(true);
         hand.AttachObject(NextThrowable.gameObject, GrabTypes.Pinch);
         StartCoroutine(SpawnThrowable());
