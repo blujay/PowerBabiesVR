@@ -5,7 +5,7 @@ using UnityEngine;
 public partial class GameStateModel
 {
     [RealtimeProperty(1, true, true)]
-    public GameStates.States _state;
+    public GameStates.States _state = GameStates.States.Loading;
 
 }
 

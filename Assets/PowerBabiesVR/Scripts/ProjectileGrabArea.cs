@@ -9,12 +9,12 @@ public class ProjectileGrabArea : MonoBehaviour
     [SerializeField] Realtime Realtime;
 
     [SerializeField] BoxCollider GrabCollider;
-    [SerializeField] PooThrowable ProjectileToGrab;
+    [SerializeField] Throwable ProjectileToGrab;
     [SerializeField] GameObject Cam;
 
     [SerializeField] [Range(0, 1)] float PlayerHeightRatio;
 
-    PooThrowable NextThrowable;
+    Throwable NextThrowable;
     Player Player;
 
     // Start is called before the first frame update
@@ -77,7 +77,7 @@ public class ProjectileGrabArea : MonoBehaviour
         while (!Realtime.connected)
             yield return null;
 
-        NextThrowable = Realtime.Instantiate(ProjectileToGrab.name).GetComponent<PooThrowable>();
+        NextThrowable = Realtime.Instantiate(ProjectileToGrab.name).GetComponent<Throwable>();
         NextThrowable.gameObject.SetActive(false);
     }
 }

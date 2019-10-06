@@ -24,7 +24,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4194349361079340177}
   - component: {fileID: 4194349361079340178}
-  - component: {fileID: 398812422983047305}
+  - component: {fileID: 8113405969329227649}
   - component: {fileID: -3311149897763207405}
   - component: {fileID: -3478521806192924555}
   - component: {fileID: 4882505830733382176}
@@ -62,7 +62,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4194349361079340185}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &398812422983047305
+--- !u!114 &8113405969329227649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4194349361079340185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47743c218c8c3944d86c152fef0a55d2, type: 3}
+  m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attachmentFlags: 44
@@ -248,9 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b547910ba1ace4dbd98a0dd2e4466c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decalData: {fileID: 11400000, guid: a5d18cff63a029645a35a0ebd28da553, type: 2}
+  decalData: {fileID: 11400000, guid: 92bf5402369ae234da52dc0b08f64289, type: 2}
   VelocityThreshold: 0.1
-  vfxColor: {r: 0.8113208, g: 0.18752226, b: 0.18752226, a: 1}
+  vfxColor: {r: 0.5283019, g: 0.2527292, b: 0.16696332, a: 1}
   MinScale: 0.2
   MaxScale: 1
 --- !u!1001 &2385385700145099267

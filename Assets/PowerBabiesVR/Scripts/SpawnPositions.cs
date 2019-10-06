@@ -32,7 +32,7 @@ public class SpawnPositions : RealtimeComponent
     public Transform CheckoutPosition(int clientID)
     {
         Debug.Log(PlayerList.AllPlayers.Count);
-        if (PlayerList.AllPlayers.Count == 0) {
+        if (PlayerList.AllPlayers.Count <= 1) {
             Debug.Log("First player into room");
             realtimeView.RequestOwnership();
             checkedOutPositions.Clear();

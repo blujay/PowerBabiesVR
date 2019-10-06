@@ -2104,6 +2104,11 @@ PrefabInstance:
       propertyPath: Realtime
       value: 
       objectReference: {fileID: 67670372}
+    - target: {fileID: 8007686108077939923, guid: 38bd7ddf7b75c854aac9d2e1e8e8126b,
+        type: 3}
+      propertyPath: PlayerHeightRatio
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38bd7ddf7b75c854aac9d2e1e8e8126b, type: 3}
 --- !u!4 &573214467 stripped
