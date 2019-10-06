@@ -1,11 +1,27 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GameCountdown : MonoBehaviour
 {
 	public Text Countdown;
 
-	private void Update ()
+    [SerializeField] float stateEnterTime;
+
+    [SerializeField] float gameLength = 60 * 5;
+
+    private void Awake()
+    {
+        GameStates.instance.gameStateChanged += OnGameStateChanged;
+
+    }
+
+    private void OnGameStateChanged(GameStates.States state)
+    {
+        stateEnterTime = Time.realtimeSinceStartup;
+    }
+
+    private void Update ()
 	{
 		if (GameStates.instance == null || GameStates.instance.CurrentState != GameStates.States.Game)
 		{
@@ -18,7 +34,7 @@ public class GameCountdown : MonoBehaviour
 		if (Countdown != null)
 		{
 			float remainingTime = 
-				(GameStates.instance.stateEnterTime + GameStates.instance.gameLength)
+				(stateEnterTime + gameLength)
 				- Time.realtimeSinceStartup;
 
 			float seconds = (int)(remainingTime % 60);
@@ -26,5 +42,17 @@ public class GameCountdown : MonoBehaviour
 
 			Countdown.text = $"{minutes}:{seconds:00}";
 		}
-	}
+
+        if (GameStates.instance.CurrentState == GameStates.States.Game)
+        {
+            if (Time.realtimeSinceStartup > stateEnterTime + gameLength)
+            {
+                // Every player is going to set the state to lobby,
+                // so this will fire multiple times. That should be fine, right?
+                GameStates.instance.CurrentState = GameStates.States.Lobby;
+            }
+        }
+    }
+
+
 }
