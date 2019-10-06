@@ -22,6 +22,7 @@ public class WalkerUI : MonoBehaviour
 
     private void OnGameStateChanged(GameStates.States state)
     {
+        Debug.LogFormat("WalkerUI : Game State change {0}",state);
         switch (state) {
             case GameStates.States.Loading:
                 break;

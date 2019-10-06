@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 33547262792306719}
   - component: {fileID: 33547262792306718}
   - component: {fileID: 33547262792306717}
-  - component: {fileID: 33547262792306716}
   m_Layer: 0
   m_Name: hand
   m_TagString: splatproof
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 33547262792306715}
   m_LocalRotation: {x: 0.00000019861236, y: -0.7071068, z: 0.70710677, w: 0.00000019861234}
   m_LocalPosition: {x: 0.4626698, y: 0.9678787, z: 0.58759964}
-  m_LocalScale: {x: 0.20690036, y: 0.20690034, z: 0.20690043}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1989,17 +1988,3 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &33547262792306716
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33547262792306715}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
