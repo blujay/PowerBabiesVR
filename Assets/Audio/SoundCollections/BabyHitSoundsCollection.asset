@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fa5a88144daa446a0e204f30332a27, type: 3}
+  m_Name: BabyHitSoundsCollection
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: e2b8ab226f2e9f342a57aba93d588a5c, type: 3}
+  - {fileID: 8300000, guid: 493565e0564c9024188100389bf623d6, type: 3}
+  - {fileID: 8300000, guid: 315ac629f94c7584e96cffeacdc7bed6, type: 3}
+  - {fileID: 8300000, guid: f0532dc00ab71c24f9beb0f0e474fc88, type: 3}
+  - {fileID: 8300000, guid: dd89cef2baa9ba24f8adcc29a109f746, type: 3}
+  volumeMinValue: 0.9
+  volumeMaxValue: 1.3
+  pitchMinValue: 0.8
+  pitchMaxValue: 1.3
