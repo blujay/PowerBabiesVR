@@ -27,14 +27,28 @@ public class GameStates : RealtimeComponent
     public States CurrentState {
         set {
             this.realtimeView.RequestOwnership();
-            _model.state = value;
-        }
+
+			bool fireReset = value == States.Lobby
+				&& _model.state != States.Lobby;
+
+			_model.state = value;
+
+			if (fireReset)
+			{
+				ResetGameForLobby ();
+			}
+		}
         get {
             return ( _model != null ) ? _model.state : States.Loading;
         }
-    }
+	}
 
-    void Awake()
+	public static void ResetGameForLobby ()
+	{
+		// Reset the decals
+	}
+
+	void Awake()
     {
         
         instance = this;
