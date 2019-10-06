@@ -185,11 +185,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4461269454340384381}
     m_Modifications:
-    - target: {fileID: 8255362955350772641, guid: 0b8d8475da57df142a6e4f7946038703,
-        type: 3}
-      propertyPath: m_Name
-      value: panel-purple-wide-plank
-      objectReference: {fileID: 0}
     - target: {fileID: 8255362955350772647, guid: 0b8d8475da57df142a6e4f7946038703,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -245,11 +240,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8255362955350772645, guid: 0b8d8475da57df142a6e4f7946038703,
+    - target: {fileID: 8255362955350772641, guid: 0b8d8475da57df142a6e4f7946038703,
+        type: 3}
+      propertyPath: m_Name
+      value: panel-purple-wide-plank
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255362955350772640, guid: 0b8d8475da57df142a6e4f7946038703,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8255362955350772642, guid: 0b8d8475da57df142a6e4f7946038703,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c53cc5f0ca48e241bd14b6b0bcf15a3, type: 2}
     - target: {fileID: 8255362955350772643, guid: 0b8d8475da57df142a6e4f7946038703,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -265,7 +270,7 @@ PrefabInstance:
       propertyPath: m_SelectedVertices.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8255362955350772640, guid: 0b8d8475da57df142a6e4f7946038703,
+    - target: {fileID: 8255362955350772645, guid: 0b8d8475da57df142a6e4f7946038703,
         type: 3}
       propertyPath: m_Mesh
       value: 
