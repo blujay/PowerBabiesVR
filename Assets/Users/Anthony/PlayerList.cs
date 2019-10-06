@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public static class PlayerList
@@ -9,6 +10,14 @@ public static class PlayerList
 	public static IReadOnlyDictionary<int, PlayerDetails> AllPlayers;
 
 	private static Dictionary<int, PlayerDetails> allPlayers;
+
+	public static PlayerDetails WinningPlayer
+	{
+		get
+		{
+			return allPlayers.Values.OrderBy (player => player.model?.score ?? 0).FirstOrDefault ();
+		}
+	}
 
 	static PlayerList ()
 	{
