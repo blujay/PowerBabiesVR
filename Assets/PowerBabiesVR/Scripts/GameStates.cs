@@ -30,6 +30,7 @@ public class GameStates : RealtimeComponent
 			
 			_model.state = value;
 
+            this.realtimeView.ClearOwnership();
 		}
         get {
             return ( _model != null ) ? _model.state : States.Loading;
