@@ -10,6 +10,6 @@ public class ClockView : MonoBehaviour
     void Update()
     {
         float time = GameStates.instance.CurrentState == GameStates.States.Game ? countdown.GetTimeElapsedNormalized() : 0;
-        clockHand.rotation = Quaternion.Euler(0, 0, 360f * time);
+        clockHand.localRotation = Quaternion.Euler(0, 0, 360f * time);
     }
 }

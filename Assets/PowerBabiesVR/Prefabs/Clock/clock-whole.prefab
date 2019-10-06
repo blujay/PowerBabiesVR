@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &373206976282718084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6407459840710927511}
+  m_Layer: 0
+  m_Name: Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6407459840710927511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373206976282718084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.7625, z: 1}
+  m_Children:
+  - {fileID: 5985793330532696186}
+  m_Father: {fileID: 4183055007309117111}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5079801212304532200
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,8 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4183055007309117111}
+  - component: {fileID: 3020297089038391785}
   m_Layer: 0
-  m_Name: clock
+  m_Name: clock-whole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,10 +60,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5657618487917628908}
-  - {fileID: 5985793330532696186}
+  - {fileID: 6407459840710927511}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3020297089038391785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079801212304532200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2bc537e1678d0b4cbe540f93af7fdcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdown: {fileID: 0}
+  clockHand: {fileID: 6407459840710927511}
 --- !u!1001 &4162502544364123856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7212,7 +7258,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4183055007309117111}
+    m_TransformParent: {fileID: 6407459840710927511}
     m_Modifications:
     - target: {fileID: 5609201731973655436, guid: 929b449afe95c46189004118043239f2,
         type: 3}
@@ -7222,7 +7268,7 @@ PrefabInstance:
     - target: {fileID: 7920632435561709796, guid: 929b449afe95c46189004118043239f2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: 0.0037
       objectReference: {fileID: 0}
     - target: {fileID: 7920632435561709796, guid: 929b449afe95c46189004118043239f2,
         type: 3}
@@ -7257,7 +7303,7 @@ PrefabInstance:
     - target: {fileID: 7920632435561709796, guid: 929b449afe95c46189004118043239f2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7920632435561709796, guid: 929b449afe95c46189004118043239f2,
         type: 3}
@@ -7273,6 +7319,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920632435561709796, guid: 929b449afe95c46189004118043239f2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6673272
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920632435561709796, guid: 929b449afe95c46189004118043239f2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6673273
       objectReference: {fileID: 0}
     - target: {fileID: 2518630837445139773, guid: 929b449afe95c46189004118043239f2,
         type: 3}
@@ -7307,7 +7363,7 @@ PrefabInstance:
     - target: {fileID: 5266530657512182638, guid: 49155a5a89c05416bab959b7e895503d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: 0.0159
       objectReference: {fileID: 0}
     - target: {fileID: 5266530657512182638, guid: 49155a5a89c05416bab959b7e895503d,
         type: 3}
@@ -7317,7 +7373,7 @@ PrefabInstance:
     - target: {fileID: 5266530657512182638, guid: 49155a5a89c05416bab959b7e895503d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0029999986
+      value: -0.0079
       objectReference: {fileID: 0}
     - target: {fileID: 5266530657512182638, guid: 49155a5a89c05416bab959b7e895503d,
         type: 3}
