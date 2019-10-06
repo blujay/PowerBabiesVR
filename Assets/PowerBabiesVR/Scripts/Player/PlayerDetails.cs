@@ -17,6 +17,7 @@ public class PlayerDetails : RealtimeComponent
 			isLocal = realtimeView.isOwnedLocally;
             if (isLocal)
             {
+                DamageCollider.gameObject.layer = 14;
                 _model.name = Environment.UserName;
 
 				if (GameStates.instance != null)
@@ -42,6 +43,8 @@ public class PlayerDetails : RealtimeComponent
             return _model;
         }
     }
+
+    [SerializeField] Collider DamageCollider;
 
     private void OnModelSet()
     {
@@ -71,4 +74,21 @@ public class PlayerDetails : RealtimeComponent
 			}
 		}
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!isLocal)
+        {
+            return;
+        }
+        if (collision.transform != null)
+        {
+            var incomingProjectile = collision.transform.GetComponent<RealtimeThrowable>();
+
+            if (incomingProjectile != null)
+            {
+                _model.score -= 1;
+            }
+        }
+    }
 }
