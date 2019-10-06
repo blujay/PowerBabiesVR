@@ -51,14 +51,14 @@ public static class PlayerList
     public static bool AllReady() 
     {
         bool result = true;
-        /*
+        
         foreach (var player in allPlayers.Values) {
-            if (!player._model.isReady) {
+            if (!player.model.isReady) {
                 result = false;
                 break;
             }
         }
-        */
+        
         return result;
     }
 }

@@ -31,6 +31,14 @@ public class SpawnPositions : RealtimeComponent
 
     public Transform CheckoutPosition(int clientID)
     {
+        Debug.Log(PlayerList.AllPlayers.Count);
+        if (PlayerList.AllPlayers.Count == 0) {
+            Debug.Log("First player into room");
+            realtimeView.RequestOwnership();
+            checkedOutPositions.Clear();
+            _model.slotsUsed = 0;
+        }
+
         int freeIndex = -1;
         for (int i = 0; i < spawnPosition.Length; i++) {
             bool free = ( (_model.slotsUsed >> i) & 1 ) == 0;
@@ -51,6 +59,8 @@ public class SpawnPositions : RealtimeComponent
 
         _model.slotsUsed |= ( 1 << freeIndex ) ;
 
+        realtimeView.ClearOwnership();
+
         return spawnPosition[freeIndex];
     }
 
@@ -63,7 +73,10 @@ public class SpawnPositions : RealtimeComponent
         int slot = checkedOutPositions[clientID];
         checkedOutPositions.Remove(clientID);
         _model.slotsUsed &= ~(1 << slot);
+
+        realtimeView.ClearOwnership();
+
     }
 
-    
+
 }
