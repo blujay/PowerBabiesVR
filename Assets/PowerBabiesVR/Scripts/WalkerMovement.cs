@@ -11,6 +11,7 @@ public class WalkerMovement : RealtimeComponent
 
     Transform feetPosition;
     [SerializeField] Transform target;
+    [SerializeField] RealtimeView targetRealtimeView;
 
     private WalkerSyncModel model {
         set {
@@ -22,6 +23,12 @@ public class WalkerMovement : RealtimeComponent
 
     void Configure() {
         feetPosition = GameObject.FindObjectOfType<FeetTracking>().transform;
+        StartCoroutine( SetOwnershipAtEndOfFrame() );
+    }
+
+    IEnumerator SetOwnershipAtEndOfFrame() {
+        yield return new WaitForEndOfFrame();
+        targetRealtimeView.RequestOwnership();
     }
 
     private void Update()
