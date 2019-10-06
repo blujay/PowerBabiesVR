@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01fa5a88144daa446a0e204f30332a27, type: 3}
   m_Name: PickupAnything
   m_EditorClassIdentifier: 
-  clips: []
-  volumeMinValue: 1
-  volumeMaxValue: 1
-  pitchMinValue: 1
-  pitchMaxValue: 1
+  clips:
+  - {fileID: 8300000, guid: 628781c50e7c1304b93963a7b7cd05ae, type: 3}
+  - {fileID: 8300000, guid: 834da298eb67fd241abd8657ac1edf7c, type: 3}
+  - {fileID: 8300000, guid: cfc7bd3a727f775418b4d8a98fb140ce, type: 3}
+  - {fileID: 8300000, guid: 55b95f16584f9f04f89112fb760546a5, type: 3}
+  - {fileID: 8300000, guid: 812d96dfb618f004da586fcf6602c886, type: 3}
+  volumeMinValue: 0.8
+  volumeMaxValue: 1.2
+  pitchMinValue: 0.8
+  pitchMaxValue: 1.3

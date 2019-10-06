@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public static class PlayerList
@@ -9,6 +10,14 @@ public static class PlayerList
 	public static IReadOnlyDictionary<int, PlayerDetails> AllPlayers;
 
 	private static Dictionary<int, PlayerDetails> allPlayers;
+
+	public static PlayerDetails WinningPlayer
+	{
+		get
+		{
+			return allPlayers.Values.OrderBy (player => player.model?.score ?? 0).FirstOrDefault ();
+		}
+	}
 
 	static PlayerList ()
 	{
@@ -51,14 +60,14 @@ public static class PlayerList
     public static bool AllReady() 
     {
         bool result = true;
-        /*
+        
         foreach (var player in allPlayers.Values) {
-            if (!player._model.isReady) {
+            if (!player.model.isReady) {
                 result = false;
                 break;
             }
         }
-        */
+        
         return result;
     }
 }
