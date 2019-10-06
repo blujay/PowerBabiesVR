@@ -289,7 +289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GrabCollider: {fileID: 2810920685703259351}
-  ProjectileToGrab: {fileID: 0}
+  ProjectileToGrab: {fileID: 398812422983047305, guid: c1724f49481093247bd43840545f0cc4,
+    type: 3}
   Cam: {fileID: 125964}
   PlayerHeightRatio: 0.3
 --- !u!1 &109154
