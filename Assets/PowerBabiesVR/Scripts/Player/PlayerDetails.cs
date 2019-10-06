@@ -50,6 +50,7 @@ public class PlayerDetails : RealtimeComponent
 
     private void OnPlayerReady(PlayerDetailsSyncModel model, bool value)
     {
+        Debug.Log("Checking if all players are ready");
         if (PlayerList.AllReady() && GameStates.instance) {
             GameStates.instance.CurrentState = GameStates.States.Game;
         }

@@ -62,6 +62,7 @@ public static class PlayerList
         bool result = true;
         
         foreach (var player in allPlayers.Values) {
+            Debug.LogFormat("Player {0} {1}",player.realtime.clientID ,player.model.isReady?"ready":"not ready");
             if (!player.model.isReady) {
                 result = false;
                 break;
