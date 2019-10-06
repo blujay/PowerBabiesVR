@@ -11,7 +11,7 @@ public class WalkerMovement : RealtimeComponent
 
     Transform feetPosition;
     [SerializeField] Transform target;
-    [SerializeField] RealtimeView targetRealtimeView;
+    [SerializeField] RealtimeTransform targetRealtimeTransform;
 
     private WalkerSyncModel model {
         set {
@@ -28,7 +28,7 @@ public class WalkerMovement : RealtimeComponent
 
     IEnumerator SetOwnershipAtEndOfFrame() {
         yield return new WaitForEndOfFrame();
-        targetRealtimeView.RequestOwnership();
+        targetRealtimeTransform.RequestOwnership();
     }
 
     private void Update()
