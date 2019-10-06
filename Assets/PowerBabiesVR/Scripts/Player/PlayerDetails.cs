@@ -83,9 +83,7 @@ public class PlayerDetails : RealtimeComponent
         }
         if (collision.transform != null)
         {
-            var incomingProjectile = collision.transform.GetComponent<RealtimeThrowable>();
-
-            if (incomingProjectile != null)
+            if (collision.gameObject.layer == 11)
             {
                 _model.score -= 1;
             }
