@@ -7,6 +7,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - holonspace
+  - splatproof
   layers:
   - Default
   - TransparentFX
