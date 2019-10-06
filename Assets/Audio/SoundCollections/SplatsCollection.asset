@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01fa5a88144daa446a0e204f30332a27, type: 3}
-  m_Name: Splats
+  m_Name: SplatsCollection
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: 2172eecc569a8514c9aac3d2b3581302, type: 3}

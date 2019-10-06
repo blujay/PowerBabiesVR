@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01fa5a88144daa446a0e204f30332a27, type: 3}
-  m_Name: PickupAnything
+  m_Name: PickupAnythingCollection
   m_EditorClassIdentifier: 
   clips:
   - {fileID: 8300000, guid: 628781c50e7c1304b93963a7b7cd05ae, type: 3}

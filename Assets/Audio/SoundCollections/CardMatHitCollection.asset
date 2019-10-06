@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fa5a88144daa446a0e204f30332a27, type: 3}
+  m_Name: CardMatHitCollection
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 91ab80e39716b444abfbdba2809c0834, type: 3}
+  - {fileID: 8300000, guid: 083560f5f8078fa4eb540e89e12e5c7d, type: 3}
+  - {fileID: 8300000, guid: 691a496963c669c4c82296c07c6fbebb, type: 3}
+  - {fileID: 8300000, guid: 3cbb3521a97a7504d896d2a87df6336a, type: 3}
+  - {fileID: 8300000, guid: 6832dca9164c570448a0f279fb0e8d8a, type: 3}
+  volumeMinValue: 0.6
+  volumeMaxValue: 1
+  pitchMinValue: 0.9
+  pitchMaxValue: 1.5
