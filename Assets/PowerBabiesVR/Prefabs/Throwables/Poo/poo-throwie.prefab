@@ -101,11 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _realtime: {fileID: 0}
-  _sceneViewUUID: 09fe22909584414f835342c14d92fd04
+  _sceneViewUUID: 
   _sceneViewOwnedByCreatingClient: 1
   _sceneViewPreventOwnershipTakeover: 0
   _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
-  _isRootPrefabView: 0
+  _isRootPrefabView: 1
   _components:
   - componentID: 1
     component: {fileID: 5759724107799569812}
@@ -246,11 +246,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4206989679239315824}
     m_Modifications:
-    - target: {fileID: 3780132857540082884, guid: c562ca0e607c8f2419e16be1d7a74265,
-        type: 3}
-      propertyPath: m_Name
-      value: poo
-      objectReference: {fileID: 0}
     - target: {fileID: 157312723835915991, guid: c562ca0e607c8f2419e16be1d7a74265,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -320,6 +315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.40553105
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780132857540082884, guid: c562ca0e607c8f2419e16be1d7a74265,
+        type: 3}
+      propertyPath: m_Name
+      value: poo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c562ca0e607c8f2419e16be1d7a74265, type: 3}

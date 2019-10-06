@@ -55,7 +55,7 @@ public class ProjectileGrabArea : MonoBehaviour
         Debug.Log($"GRABBING!!! {hand}");
 
         NextThrowable.gameObject.SetActive(true);
-        NextThrowable.AttachToHand(hand);
+        hand.AttachObject(NextThrowable.gameObject, GrabTypes.Pinch);
         StartCoroutine(SpawnThrowable());
     }
 

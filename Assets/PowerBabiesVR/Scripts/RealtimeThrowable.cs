@@ -18,6 +18,7 @@ using Normal.Realtime;
 
         public void Grabbed()
         {
+            Debug.Log("GRABB");
             bob.RequestOwnership();
             bill.RequestOwnership();
         }
