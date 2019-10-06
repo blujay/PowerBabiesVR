@@ -80,6 +80,9 @@ public class GameStates : RealtimeComponent
 
     private void OnModelAttached()
     {
+        if (realtime.clientID == 0) {
+            _model.state = States.Lobby;
+        }
     }
 
     private void StateDidChange(GameStateModel model, States value)

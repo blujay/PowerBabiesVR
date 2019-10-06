@@ -10879,6 +10879,10 @@ PrefabInstance:
       propertyPath: Realtime
       value: 
       objectReference: {fileID: 1396980194}
+    - target: {fileID: 925196840, guid: 38bd7ddf7b75c854aac9d2e1e8e8126b, type: 3}
+      propertyPath: realtime
+      value: 
+      objectReference: {fileID: 1396980194}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38bd7ddf7b75c854aac9d2e1e8e8126b, type: 3}
 --- !u!4 &925196835 stripped
@@ -10905,25 +10909,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 925196834}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &925196839 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 107946, guid: 38bd7ddf7b75c854aac9d2e1e8e8126b,
-    type: 3}
-  m_PrefabInstance: {fileID: 925196834}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &925196840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925196839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5414c5d7ce32df49ac12ae9f00e18ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  realtime: {fileID: 1396980194}
 --- !u!43 &927323895
 Mesh:
   m_ObjectHideFlags: 0
