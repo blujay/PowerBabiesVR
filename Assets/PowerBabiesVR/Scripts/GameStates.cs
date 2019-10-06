@@ -44,7 +44,7 @@ public class GameStates : RealtimeComponent
 	void Awake()
     {
         
-        instance = this;
+        instance = this;        
     }
 
     private GameStateModel model
@@ -76,14 +76,22 @@ public class GameStates : RealtimeComponent
         if (_model.state == States.Loading) {
             _model.state = States.Lobby;
         }
+        StateDidChange(_model, _model.state);
     }
 
     private void StateDidChange(GameStateModel model, States value)
     {
+        Debug.LogFormat("State changes {0}",value);
         gameStateChanged.Invoke(value);
-		if (value == States.Lobby) {
+        if (value == States.Lobby)
+        {
             ResetGameForLobby();
+            StartLobbyEvent.Invoke();
         }
+        else if (value == States.Game) {
+            StartGameEvent.Invoke();
+        }
+
 	}
 
     public void PlayerReady() 
