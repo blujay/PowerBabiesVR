@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameCountdown : MonoBehaviour
 {
-	public Text Countdown;
+    [SerializeField] Text Countdown;
 
     [SerializeField] float stateEnterTime;
 
@@ -25,15 +25,16 @@ public class GameCountdown : MonoBehaviour
 	{
 		if (GameStates.instance == null || GameStates.instance.CurrentState != GameStates.States.Game)
 		{
-			Countdown.gameObject.SetActive (false);
+			if(Countdown) Countdown.gameObject.SetActive (false);
 			return;
 		}
 
-		Countdown.gameObject.SetActive (true);
-
+        
 		if (Countdown != null)
 		{
-			float remainingTime = 
+            Countdown.gameObject.SetActive(true);
+
+            float remainingTime = 
 				(stateEnterTime + gameLength)
 				- Time.realtimeSinceStartup;
 
