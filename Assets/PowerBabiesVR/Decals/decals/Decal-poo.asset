@@ -60,7 +60,7 @@ MonoBehaviour:
   - displayName: Albedo
     referenceName: _AlbedoTex
     type: 0
-    textureValue: {fileID: 2800000, guid: 6855ec5d72da4a1479712669896e6744, type: 3}
+    textureValue: {fileID: 2800000, guid: 99a1ea583a4bfca42ace2a41137667fb, type: 3}
     colorValue: {r: 0, g: 0, b: 0, a: 0}
     floatValue: 0
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
@@ -69,14 +69,14 @@ MonoBehaviour:
     referenceName: _Color
     type: 1
     textureValue: {fileID: 0}
-    colorValue: {r: 0.754717, g: 0.445778, b: 0.21003917, a: 1}
+    colorValue: {r: 0.8679245, g: 0.3725525, b: 0.3963036, a: 1}
     floatValue: 0
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
     boolValue: 0
   - displayName: Normal
     referenceName: _NormalTex
     type: 0
-    textureValue: {fileID: 0}
+    textureValue: {fileID: 2800000, guid: 6855ec5d72da4a1479712669896e6744, type: 3}
     colorValue: {r: 0, g: 0, b: 0, a: 0}
     floatValue: 0
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
@@ -86,13 +86,13 @@ MonoBehaviour:
     type: 2
     textureValue: {fileID: 0}
     colorValue: {r: 0, g: 0, b: 0, a: 0}
-    floatValue: 0
+    floatValue: 0.4
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
     boolValue: 0
   - displayName: Specular Map
     referenceName: _SpecularTex
     type: 0
-    textureValue: {fileID: 0}
+    textureValue: {fileID: 2800000, guid: 6855ec5d72da4a1479712669896e6744, type: 3}
     colorValue: {r: 0, g: 0, b: 0, a: 0}
     floatValue: 0
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
     referenceName: _Specular
     type: 1
     textureValue: {fileID: 0}
-    colorValue: {r: 0.8980392, g: 0.1692262, b: 0.12941174, a: 1}
+    colorValue: {r: 0.8980392, g: 0.12941174, b: 0.13743354, a: 1}
     floatValue: 0
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
     boolValue: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   - displayName: Emission Map
     referenceName: _EmissionTex
     type: 0
-    textureValue: {fileID: 0}
+    textureValue: {fileID: 2800000, guid: 6855ec5d72da4a1479712669896e6744, type: 3}
     colorValue: {r: 0, g: 0, b: 0, a: 0}
     floatValue: 0
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
     referenceName: _EmissionColor
     type: 1
     textureValue: {fileID: 0}
-    colorValue: {r: 0.5471698, g: 0.059362773, b: 0.29497114, a: 1}
+    colorValue: {r: 0.9245283, g: 0.18752226, b: 0.5993554, a: 1}
     floatValue: 0
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
     boolValue: 0
@@ -134,6 +134,6 @@ MonoBehaviour:
     type: 2
     textureValue: {fileID: 0}
     colorValue: {r: 0, g: 0, b: 0, a: 0}
-    floatValue: 0.3
+    floatValue: 0.4
     vectorValue: {x: 0, y: 0, z: 0, w: 0}
     boolValue: 0
