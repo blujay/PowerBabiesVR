@@ -132,7 +132,7 @@ Material:
     m_Colors:
     - _Bordercolor: {r: 0, g: 0.70980394, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Edgecolor: {r: 2.6594877, g: 0.057193283, b: 0, a: 1}
+    - _Edgecolor: {r: 0.90440446, g: 0.055458788, b: 0.19540161, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainPanningspeed: {r: -0.05, g: 0.05, b: 0, a: 0}
     - _Maincolor: {r: 1.7411011, g: 0.90810376, b: 0, a: 1}
