@@ -294,7 +294,7 @@ MonoBehaviour:
   ProjectileToGrab: {fileID: 8113405969329227649, guid: c1724f49481093247bd43840545f0cc4,
     type: 3}
   Cam: {fileID: 125964}
-  PlayerHeightRatio: 0.3
+  PlayerHeightRatio: 0.759
 --- !u!114 &925196840
 MonoBehaviour:
   m_ObjectHideFlags: 0
