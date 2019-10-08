@@ -48,8 +48,6 @@ public class AddSplat : MonoBehaviour
 
     private void DestroyMe()
     {
-        //Destroy(gameObject);
-        var rt = FindObjectOfType<Realtime>();
-        rt.Destroy(gameObject);
+        Realtime.Destroy(gameObject);
     }
 }
