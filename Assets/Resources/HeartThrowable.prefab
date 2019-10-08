@@ -267,7 +267,7 @@ MonoBehaviour:
   ElapsedTimeThreshold: 0.2
   vfxColor: {r: 0.8773585, g: 0.16140087, b: 0.37563318, a: 1}
   MinScale: 0.2
-  MaxScale: 5
+  MaxScale: 1
 --- !u!1001 &749778034857653002
 PrefabInstance:
   m_ObjectHideFlags: 0
