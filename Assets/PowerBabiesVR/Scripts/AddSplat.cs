@@ -2,6 +2,7 @@
 using Pyro;
 using UnityEngine;
 using Valve.VR.InteractionSystem;
+using Normal.Realtime;
 
 public class AddSplat : MonoBehaviour
 {
@@ -42,5 +43,13 @@ public class AddSplat : MonoBehaviour
         );
         decal.gameObject.transform.parent = hit.otherCollider.transform;
         splatParticles.Launch(hit.point, vfxColor);
+        Invoke(nameof(DestroyMe), 0.2f);
+    }
+
+    private void DestroyMe()
+    {
+        //Destroy(gameObject);
+        var rt = FindObjectOfType<Realtime>();
+        rt.Destroy(gameObject);
     }
 }

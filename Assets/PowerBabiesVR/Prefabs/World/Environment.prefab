@@ -1087,8 +1087,7 @@ AudioSource:
   m_GameObject: {fileID: 2415280749552188738}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -6158067295035143540, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 91a6a6f48c2b4eb44a9b1d6c2dd9c3e8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -6108,7 +6107,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -84.567
       objectReference: {fileID: 0}
+    - target: {fileID: 2718649263403796692, guid: 66cdd3224a9534b478b82a0bafccfa19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4416945654387107993, guid: 66cdd3224a9534b478b82a0bafccfa19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 596696483185856261, guid: 66cdd3224a9534b478b82a0bafccfa19,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -6128,21 +6137,11 @@ PrefabInstance:
       propertyPath: m_SelectedVertices.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 596696483185856261, guid: 66cdd3224a9534b478b82a0bafccfa19,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 7819659510733466325, guid: 66cdd3224a9534b478b82a0bafccfa19,
         type: 3}
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 3138524088781908296}
-    - target: {fileID: 2718649263403796692, guid: 66cdd3224a9534b478b82a0bafccfa19,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66cdd3224a9534b478b82a0bafccfa19, type: 3}
 --- !u!4 &893928406229469721 stripped
@@ -10384,7 +10383,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.544743
       objectReference: {fileID: 0}
+    - target: {fileID: 2718649263403796692, guid: 66cdd3224a9534b478b82a0bafccfa19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4416945654387107993, guid: 66cdd3224a9534b478b82a0bafccfa19,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 596696483185856261, guid: 66cdd3224a9534b478b82a0bafccfa19,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
@@ -10399,6 +10408,11 @@ PrefabInstance:
       propertyPath: m_SelectedVertices.Array.data[0]
       value: 43
       objectReference: {fileID: 0}
+    - target: {fileID: 7819659510733466325, guid: 66cdd3224a9534b478b82a0bafccfa19,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 3138524088781908296}
     - target: {fileID: 4416945654387107999, guid: 66cdd3224a9534b478b82a0bafccfa19,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -10413,21 +10427,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectedVertices.Array.size
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 596696483185856261, guid: 66cdd3224a9534b478b82a0bafccfa19,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 7819659510733466325, guid: 66cdd3224a9534b478b82a0bafccfa19,
-        type: 3}
-      propertyPath: m_ProbeAnchor
-      value: 
-      objectReference: {fileID: 3138524088781908296}
-    - target: {fileID: 2718649263403796692, guid: 66cdd3224a9534b478b82a0bafccfa19,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66cdd3224a9534b478b82a0bafccfa19, type: 3}
