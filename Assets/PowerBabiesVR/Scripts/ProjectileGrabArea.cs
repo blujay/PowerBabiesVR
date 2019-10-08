@@ -75,6 +75,7 @@ public class ProjectileGrabArea : MonoBehaviour
             yield return null;
 
         NextThrowable = Realtime.Instantiate(ProjectileToGrab.name).GetComponent<Throwable>();
+        NextThrowable.GetComponent<AddSplat>().myPowerBaby = gameObject.transform.root; // Give thrown objects a reference to who threw them
         NextThrowable.gameObject.SetActive(false);
     }
 }

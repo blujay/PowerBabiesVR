@@ -13,6 +13,8 @@ public class AddSplat : MonoBehaviour
     public Color vfxColor = Color.red;
     public float MinScale = .2f;
     public float MaxScale = 1f;
+    [HideInInspector]
+    public Transform myPowerBaby;
 
     private float LastDecalTime;
     private Rigidbody rb;
@@ -30,10 +32,15 @@ public class AddSplat : MonoBehaviour
     {
         ContactPoint hit = other.contacts[0];
         float velocity = hit.thisCollider.attachedRigidbody.velocity.magnitude;
-        if (velocity < VelocityThreshold) return;
-        if (Time.time - LastDecalTime < ElapsedTimeThreshold) return;
-        if (hit.otherCollider.gameObject.GetComponent<Throwable>() != null) return;
-        if (hit.otherCollider.gameObject.tag == "splatproof") return;
+        var splattee = hit.otherCollider.gameObject;
+
+        if (velocity < VelocityThreshold) return;  // Don't splat on small bounces
+        if (Time.time - LastDecalTime < ElapsedTimeThreshold) return;  // Don't splat too often
+        if (splattee.GetComponent<Throwable>() != null) return;  // Don't splat other throwables
+        if (splattee.tag == "splatproof") return;  // Don't splat tagged objects
+        if (splattee.transform.root == myPowerBaby) return;  // Don't splat myself
+        if (splattee.transform.root == FindObjectOfType<RealtimeAvatarManager>().localAvatar.transform) return;  // Don't splat my own avatar
+
         LastDecalTime = Time.time;
         Decal decal = DecalSystem.GetDecal(
             hit.point,
