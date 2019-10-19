@@ -15,11 +15,11 @@ public static class PlayerList
 	{
 		get
 		{
-			return allPlayers.Values.OrderBy (player => player.model?.score ?? 0).FirstOrDefault ();
+			return allPlayers.Values.OrderBy(player => player.model?.score ?? 0).FirstOrDefault ();
 		}
 	}
 
-	static PlayerList ()
+	static PlayerList()
 	{
 		allPlayers = new Dictionary<int, PlayerDetails> ();
 		AllPlayers = allPlayers;
@@ -39,7 +39,7 @@ public static class PlayerList
 
 	public static void ForgetPlayer (PlayerDetails details)
 	{
-		allPlayers.Remove (details.realtimeView.ownerID);
+		allPlayers.Remove(details.realtimeView.ownerID);
 
 		if (OnPlayerChanges != null)
 		{
@@ -47,7 +47,7 @@ public static class PlayerList
 		}
 	}
 
-	public static void Reset ()
+	public static void Reset()
 	{
 		allPlayers.Clear ();
 

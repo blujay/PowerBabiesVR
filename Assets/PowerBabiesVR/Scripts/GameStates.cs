@@ -2,6 +2,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +13,7 @@ public class GameStates : RealtimeComponent
     public static GameStates instance;
 
     private GameStateModel _model;
+    private TextMeshPro debugText;
 
     public event Action<States> gameStateChanged;
 
@@ -24,16 +27,19 @@ public class GameStates : RealtimeComponent
         Game
     }
 
+    void Update() {
+        var players = string.Join(", ", PlayerList.AllPlayers.Values.Select(item => $"{item.model.name}: {item.model.score}"));
+        debugText.text = $"{CurrentState} {players}";
+    }
+
     public States CurrentState {
         set {
-            this.realtimeView.RequestOwnership();
-			
+            realtimeView.RequestOwnership();
 			_model.state = value;
-
-            this.realtimeView.ClearOwnership();
+            realtimeView.ClearOwnership();
 		}
         get {
-            return ( _model != null ) ? _model.state : States.Loading;
+            return _model?.state ?? States.Loading;
         }
 	}
 
@@ -45,7 +51,8 @@ public class GameStates : RealtimeComponent
 	void Awake()
     {
         
-        instance = this;        
+        instance = this;
+        debugText = gameObject.GetComponentInChildren<TextMeshPro>();
     }
 
     private GameStateModel model
