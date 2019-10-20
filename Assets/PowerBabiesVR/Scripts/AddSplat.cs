@@ -10,6 +10,8 @@ public class AddSplat : MonoBehaviour
     public ScriptableDecal decalData;
     public float VelocityThreshold = 0.1f;
     public float ElapsedTimeThreshold = 0.2f;
+    public SoundCollection SoundCollectionOnImpact;
+    private AudioSource AudioSourceToPlay;
     public Color vfxColor = Color.red;
     public float MinScale = .2f;
     public float MaxScale = 1f;
@@ -26,6 +28,7 @@ public class AddSplat : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         splatParticles = FindObjectOfType<SplatParticles>();
         LastDecalTime = Time.time;
+        AudioSourceToPlay = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -50,6 +53,7 @@ public class AddSplat : MonoBehaviour
         );
         decal.gameObject.transform.parent = hit.otherCollider.transform;
         splatParticles.Launch(hit.point, vfxColor);
+        SoundCollectionOnImpact.Play(AudioSourceToPlay);
         Invoke(nameof(DestroyMe), 0.2f);
     }
 

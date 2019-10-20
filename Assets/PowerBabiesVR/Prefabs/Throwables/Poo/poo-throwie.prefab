@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &1879240420827476455
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046671814209279783}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -2658433878178596544, guid: 47e388bafa7be554183bed9caff802da, type: 3}
 --- !u!1 &4206989679239315832
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,6 +90,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: b8c6c1db754d82c4ebee3c6ab2cdd715, type: 2}
+        m_MethodName: Play
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -236,9 +261,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decalData: {fileID: 11400000, guid: 92bf5402369ae234da52dc0b08f64289, type: 2}
   VelocityThreshold: 0.1
+  ElapsedTimeThreshold: 0.2
   vfxColor: {r: 0.20000002, g: 0.20392159, b: 0.07450981, a: 1}
   MinScale: 0.2
   MaxScale: 1
+  myPowerBaby: {fileID: 0}
 --- !u!1001 &7104784762827543821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246,6 +273,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4206989679239315824}
     m_Modifications:
+    - target: {fileID: 3780132857540082884, guid: c562ca0e607c8f2419e16be1d7a74265,
+        type: 3}
+      propertyPath: m_Name
+      value: poo
+      objectReference: {fileID: 0}
     - target: {fileID: 157312723835915991, guid: c562ca0e607c8f2419e16be1d7a74265,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -316,16 +348,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.40553105
       objectReference: {fileID: 0}
-    - target: {fileID: 3780132857540082884, guid: c562ca0e607c8f2419e16be1d7a74265,
-        type: 3}
-      propertyPath: m_Name
-      value: poo
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c562ca0e607c8f2419e16be1d7a74265, type: 3}
 --- !u!4 &6969222635122203610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 157312723835915991, guid: c562ca0e607c8f2419e16be1d7a74265,
+    type: 3}
+  m_PrefabInstance: {fileID: 7104784762827543821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3046671814209279783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5250836280229626410, guid: c562ca0e607c8f2419e16be1d7a74265,
     type: 3}
   m_PrefabInstance: {fileID: 7104784762827543821}
   m_PrefabAsset: {fileID: 0}
