@@ -154,8 +154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7196581871960251892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12320173, y: 0.1295859, z: 0.47906977}
-  m_LocalScale: {x: 0.17602925, y: 0.0613791, z: 0.17602918}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.20567827, y: 0.20567827, z: 0.20567827}
   m_Children:
   - {fileID: 5415235284964549878}
   - {fileID: 3286707896425327827}
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0e35ef0cc211b408d2d7e7eb0f850d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingPart: {fileID: 0}
+  movingPart: {fileID: 3286707896425327827}
   localMoveDistance: {x: 0, y: -0.1, z: 0}
   engageAtPercent: 0.95
   disengageAtPercent: 0.9
@@ -267,6 +267,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7196581871960251900}
     m_Modifications:
+    - target: {fileID: 3199859518749940191, guid: 6f09de17d10075541b5d43d6704f1b6e,
+        type: 3}
+      propertyPath: m_Name
+      value: start-button
+      objectReference: {fileID: 0}
     - target: {fileID: 3199859518749940177, guid: 6f09de17d10075541b5d43d6704f1b6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -322,26 +327,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 179.99998
       objectReference: {fileID: 0}
-    - target: {fileID: 3199859518749940177, guid: 6f09de17d10075541b5d43d6704f1b6e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.0422349
-      objectReference: {fileID: 0}
-    - target: {fileID: 3199859518749940177, guid: 6f09de17d10075541b5d43d6704f1b6e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.9890256
-      objectReference: {fileID: 0}
-    - target: {fileID: 3199859518749940177, guid: 6f09de17d10075541b5d43d6704f1b6e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.0422347
-      objectReference: {fileID: 0}
-    - target: {fileID: 3199859518749940191, guid: 6f09de17d10075541b5d43d6704f1b6e,
-        type: 3}
-      propertyPath: m_Name
-      value: start-button
-      objectReference: {fileID: 0}
     - target: {fileID: 3199859518749940179, guid: 6f09de17d10075541b5d43d6704f1b6e,
         type: 3}
       propertyPath: m_Mesh
@@ -358,6 +343,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3199859517864720397, guid: 6f09de17d10075541b5d43d6704f1b6e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433117577685174235, guid: 6f09de17d10075541b5d43d6704f1b6e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8412817046944394583, guid: 6f09de17d10075541b5d43d6704f1b6e,
         type: 3}
       propertyPath: m_Mesh
       value: 
