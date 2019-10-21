@@ -58,13 +58,13 @@ public class ProjectileGrabArea : MonoBehaviour
 
     void UpdateGrabAreaTransform ()
     {
-        var grabAreaScale = GrabCollider.size;
-        grabAreaScale.y = Player.eyeHeight * PlayerHeightRatio;
-        GrabCollider.size = grabAreaScale;
+        //var grabAreaScale = GrabCollider.size;
+        //grabAreaScale.y = Player.eyeHeight * PlayerHeightRatio;
+        //GrabCollider.size = grabAreaScale;
 
         var grabAreaPos = GrabCollider.transform.position;
         grabAreaPos.x = Player.feetPositionGuess.x;
-        grabAreaPos.y = grabAreaScale.y * 0.5f;
+        //grabAreaPos.y = grabAreaScale.y * 0.5f;
         grabAreaPos.z = Player.feetPositionGuess.z;
         GrabCollider.transform.position = grabAreaPos;
     }
