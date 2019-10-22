@@ -58,7 +58,7 @@ public class AddSplat : MonoBehaviour
         Instantiate(SpawnPrefabOnImpact, hit.point, hit.otherCollider.transform.rotation);
         Invoke(nameof(DestroyMe), 0.2f);
 
-        var playerDetails = splattee.transform.root.GetComponent<PlayerDetails>();
+        var playerDetails = myPowerBaby.GetComponent<PlayerDetails>();
         if (playerDetails != null)
         {
             playerDetails.model.score += 10;
