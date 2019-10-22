@@ -34,6 +34,7 @@ public class AddSplat : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        if (gameObject == null) return; //
         ContactPoint hit = other.contacts[0];
         float velocity = hit.thisCollider.attachedRigidbody.velocity.magnitude;
         var splattee = hit.otherCollider.gameObject;
