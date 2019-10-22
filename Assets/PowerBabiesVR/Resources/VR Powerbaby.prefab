@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _realtime: {fileID: 0}
-  _sceneViewUUID: 2473c4d825e87e4bae09b89d6f24611a
+  _sceneViewUUID: 5e9a9c6277c3af4dbc06b24a2a9039e8
   _sceneViewOwnedByCreatingClient: 1
   _sceneViewPreventOwnershipTakeover: 0
   _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
@@ -942,7 +942,7 @@ PrefabInstance:
     - target: {fileID: 2085595527103230803, guid: 744fe782f392a314db9cd84c9ccac4d5,
         type: 3}
       propertyPath: m_Name
-      value: baby-player-zero
+      value: baby-zero
       objectReference: {fileID: 0}
     - target: {fileID: 5098962437342973851, guid: 744fe782f392a314db9cd84c9ccac4d5,
         type: 3}
