@@ -12,7 +12,7 @@ public class AddSplat : MonoBehaviour
     public float ElapsedTimeThreshold = 0.2f;
     public SoundCollection SoundCollectionOnImpact;
     private AudioSource AudioSourceToPlay;
-    public Transform SpawnPrefabOnImpact;
+    //public Transform SpawnPrefabOnImpact;
     public Color vfxColor = Color.red;
     public float MinScale = .2f;
     public float MaxScale = 1f;
@@ -55,7 +55,7 @@ public class AddSplat : MonoBehaviour
         decal.gameObject.transform.parent = hit.otherCollider.transform;
         splatParticles.Launch(hit.point, vfxColor);
         SoundCollectionOnImpact.Play(AudioSourceToPlay);
-        Instantiate(SpawnPrefabOnImpact, hit.point, hit.otherCollider.transform.rotation);
+        //Instantiate(SpawnPrefabOnImpact, hit.point, hit.otherCollider.transform.rotation);
         Invoke(nameof(DestroyMe), 0.2f);
 
         var playerDetails = myPowerBaby.GetComponent<PlayerDetails>();
