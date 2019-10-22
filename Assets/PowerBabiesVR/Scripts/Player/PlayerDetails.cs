@@ -89,7 +89,7 @@ public class PlayerDetails : RealtimeComponent
         {
             if (collision.gameObject.layer == 11)
             {
-                _model.score -= 1;
+                //_model.score -= 1;
             }
         }
     }

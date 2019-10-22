@@ -57,6 +57,14 @@ public class AddSplat : MonoBehaviour
         SoundCollectionOnImpact.Play(AudioSourceToPlay);
         Instantiate(SpawnPrefabOnImpact, hit.point, hit.otherCollider.transform.rotation);
         Invoke(nameof(DestroyMe), 0.2f);
+
+        var playerDetails = splattee.transform.root.GetComponent<PlayerDetails>();
+        if (playerDetails != null)
+        {
+            playerDetails.model.score += 10;
+            Debug.Log($"model score: {playerDetails.model.score}");
+
+        }
     }
 
     private void DestroyMe()
