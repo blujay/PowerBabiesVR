@@ -76,7 +76,7 @@ public class PlayerDetails : RealtimeComponent
 		}
 	}
 
-    private void OnCollisionEnter(Collision collision)
+	private void OnTriggerEnter(Collider other)
     {
         if (_model == null)
             return;
@@ -85,11 +85,11 @@ public class PlayerDetails : RealtimeComponent
         {
             return;
         }
-        if (collision.transform != null)
+        if (other.transform != null)
         {
-            if (collision.gameObject.layer == 11)
+            if (other.gameObject.layer == 11)
             {
-                //_model.score -= 1;
+                _model.score -= 1;
             }
         }
     }
