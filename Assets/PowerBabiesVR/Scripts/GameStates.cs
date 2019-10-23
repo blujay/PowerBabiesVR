@@ -28,7 +28,7 @@ public class GameStates : RealtimeComponent
     }
 
     void Update() {
-        var players = string.Join(", ", PlayerList.AllPlayers.Values.Select(item => $"{item.model.name}: {item.model.score}"));
+        var players = string.Join(", ", PlayerList.AllPlayers.Values.Select(item => $"#{item.model.playerNumber} {item.model.name}: {item.model.score}"));
         debugText.text = $"{CurrentState} {players}";
     }
 
@@ -42,6 +42,11 @@ public class GameStates : RealtimeComponent
             return _model?.state ?? States.Loading;
         }
 	}
+
+    public static int GetPlayerNumber()
+    {
+        return PlayerList.AllPlayers.Count;
+    }
 
 	public static void ResetGameForLobby ()
 	{

@@ -5,18 +5,14 @@ using UnityEngine;
 
 public static class PlayerList
 {
+
 	public static event Action OnPlayerChanges;
-
 	public static IReadOnlyDictionary<int, PlayerDetails> AllPlayers;
-
 	private static Dictionary<int, PlayerDetails> allPlayers;
 
 	public static PlayerDetails WinningPlayer
 	{
-		get
-		{
-			return allPlayers.Values.OrderBy(player => player.model?.score ?? 0).FirstOrDefault ();
-		}
+		get {return allPlayers.Values.OrderBy(player => player.model?.score ?? 0).FirstOrDefault ();}
 	}
 
 	static PlayerList()
@@ -27,34 +23,21 @@ public static class PlayerList
 
 	public static void DiscoverPlayer (PlayerDetails details)
 	{
-		Debug.Log ("Discovering a " + details.realtimeView.ownerID);
-
+		// Debug.Log ("Discovering a " + details.realtimeView.ownerID);
 		allPlayers[details.realtimeView.ownerID] = details;
-
-		if (OnPlayerChanges != null)
-		{
-			OnPlayerChanges ();
-		}
+		OnPlayerChanges?.Invoke();
 	}
 
 	public static void ForgetPlayer (PlayerDetails details)
 	{
 		allPlayers.Remove(details.realtimeView.ownerID);
-
-		if (OnPlayerChanges != null)
-		{
-			OnPlayerChanges ();
-		}
+		OnPlayerChanges?.Invoke();
 	}
 
 	public static void Reset()
 	{
 		allPlayers.Clear ();
-
-		if (OnPlayerChanges != null)
-		{
-			OnPlayerChanges ();
-		}
+		OnPlayerChanges?.Invoke();
 	}
 
     public static bool AllReady() 
@@ -62,7 +45,7 @@ public static class PlayerList
         bool result = true;
         
         foreach (var player in allPlayers.Values) {
-            Debug.LogFormat("Player {0} {1}",player.realtime.clientID ,player.model.isReady?"ready":"not ready");
+            // Debug.LogFormat("Player {0} {1}",player.realtime.clientID ,player.model.isReady?"ready":"not ready");
             if (!player.model.isReady) {
                 result = false;
                 break;

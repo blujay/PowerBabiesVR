@@ -1,12 +1,16 @@
 ﻿using Normal.Realtime;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class PlayerDetails : RealtimeComponent
 {
+	[SerializeField] Collider DamageCollider;
+
     private PlayerDetailsSyncModel _model;
-    bool hasModel = false;
-    bool isLocal = false;
+    private bool hasModel;
+    private bool isLocal;
 
 	public PlayerDetailsSyncModel model
 	{
@@ -19,15 +23,13 @@ public class PlayerDetails : RealtimeComponent
             {
                 DamageCollider.gameObject.layer = 14;
                 _model.name = Environment.UserName;
+                _model.playerNumber = GameStates.GetPlayerNumber();
 
 				if (GameStates.instance != null)
 				{
 					GameStates.instance.gameStateChanged += state =>
 					{
-						if (state == GameStates.States.Lobby)
-						{
-							_model.score = 0;
-						}
+						if (state == GameStates.States.Lobby) _model.score = 0;
 					};
 				}
 				else
@@ -38,13 +40,8 @@ public class PlayerDetails : RealtimeComponent
     		PlayerList.DiscoverPlayer (this);
             OnModelSet();
 		}
-        get
-        {
-            return _model;
-        }
+        get {return _model;}
     }
-
-    [SerializeField] Collider DamageCollider;
 
     private void OnModelSet()
     {
@@ -69,10 +66,7 @@ public class PlayerDetails : RealtimeComponent
 	{
 		if (hasModel && isLocal)
 		{
-			if (Input.GetKeyDown (KeyCode.Space))
-			{
-				_model.score += 2;
-			}
+			if (Input.GetKeyDown (KeyCode.Space)) _model.score += 2;
 		}
 	}
 
@@ -84,19 +78,11 @@ public class PlayerDetails : RealtimeComponent
 
 	private void OnTriggerEnter(Collider other)
     {
-        if (_model == null)
-            return;
-
-        if (!isLocal)
-        {
-            return;
-        }
+        if (_model == null) return;
+        if (!isLocal) return;
         if (other.transform != null)
         {
-            if (other.gameObject.layer == 11)
-            {
-                _model.score -= 1;
-            }
+            if (other.gameObject.layer == 11) _model.score -= 1;
         }
     }
 }
