@@ -10,7 +10,6 @@ public class BabyModels : MonoBehaviour
 
     void Start()
     {
-        babyModels = GetComponentsInChildren<Transform>();
         AssignModel((int)(Random.value * 4));
     }
 
