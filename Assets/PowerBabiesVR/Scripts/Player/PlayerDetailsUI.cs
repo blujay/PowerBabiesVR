@@ -8,6 +8,7 @@ public class PlayerDetailsUI : MonoBehaviour
 	[Space]
 	public Text Name;
 	public Text Score;
+	public Text PlayerNumber;
 
 	[Header ("Readonly")]
 	public PlayerDetails CurrentlyFollowing;
@@ -28,6 +29,8 @@ public class PlayerDetailsUI : MonoBehaviour
 			{
 				CurrentlyFollowing.model.nameDidChange -= UpdateName;
 				CurrentlyFollowing.model.scoreDidChange -= UpdateScore;
+				CurrentlyFollowing.model.playerNumberDidChange -= UpdatePlayerNumber;
+
 			}
 		}
 
@@ -37,11 +40,14 @@ public class PlayerDetailsUI : MonoBehaviour
 		{
 			UpdateName (details.model, details.model?.name ?? "-");
 			UpdateScore (details.model, details.model?.score ?? 0);
+			UpdatePlayerNumber (details.model, details.model?.playerNumber ?? 0);
 
 			if (details.model != null)
 			{
 				details.model.nameDidChange += UpdateName;
 				details.model.scoreDidChange += UpdateScore;
+				details.model.playerNumberDidChange += UpdatePlayerNumber;
+
 			}
 		}
 		else
@@ -53,6 +59,10 @@ public class PlayerDetailsUI : MonoBehaviour
 			if (Score != null)
 			{
 				Score.text = "0";
+			}
+			if (PlayerNumber != null)
+			{
+				PlayerNumber.text = "~";
 			}
 		}
 	}
@@ -70,6 +80,15 @@ public class PlayerDetailsUI : MonoBehaviour
 		if (Score != null)
 		{
 			Score.text = value.ToString();
+		}
+	}
+
+
+	private void UpdatePlayerNumber (PlayerDetailsSyncModel model, int value)
+	{
+		if (PlayerNumber != null)
+		{
+			PlayerNumber.text = value.ToString();
 		}
 	}
 }
