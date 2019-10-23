@@ -315,11 +315,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _realtime: {fileID: 0}
-  _sceneViewUUID: 21f52e4afebe5e47b88fa39ce22753db
+  _sceneViewUUID: 
   _sceneViewOwnedByCreatingClient: 1
   _sceneViewPreventOwnershipTakeover: 0
   _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
-  _isRootPrefabView: 0
+  _isRootPrefabView: 1
   _components:
   - componentID: 1
     component: {fileID: 114800176784454794}
@@ -861,11 +861,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4258753728346310}
     m_Modifications:
-    - target: {fileID: 33547262792306715, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_Name
-      value: hand
-      objectReference: {fileID: 0}
     - target: {fileID: 33547262792306705, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -920,6 +915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -91.00201
+      objectReference: {fileID: 0}
+    - target: {fileID: 33547262792306715, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
+        type: 3}
+      propertyPath: m_Name
+      value: hand
       objectReference: {fileID: 0}
     - target: {fileID: 33547262792306719, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
         type: 3}
@@ -1961,11 +1961,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4369254572010764}
     m_Modifications:
-    - target: {fileID: 33547262792306715, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
-        type: 3}
-      propertyPath: m_Name
-      value: hand
-      objectReference: {fileID: 0}
     - target: {fileID: 33547262792306705, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2021,6 +2016,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -91.00201
       objectReference: {fileID: 0}
+    - target: {fileID: 33547262792306715, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
+        type: 3}
+      propertyPath: m_Name
+      value: hand
+      objectReference: {fileID: 0}
     - target: {fileID: 33547262792306719, guid: 44fe0a47cb7f7463d9de69b3675f6ce5,
         type: 3}
       propertyPath: m_Mesh
@@ -2041,16 +2041,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4098411418399560}
     m_Modifications:
-    - target: {fileID: 6048974703161480384, guid: 926b5966fe898b948b22c634022c84d3,
-        type: 3}
-      propertyPath: m_Name
-      value: baby-zero-head
-      objectReference: {fileID: 0}
-    - target: {fileID: 6048974703161480384, guid: 926b5966fe898b948b22c634022c84d3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6048974703161480385, guid: 926b5966fe898b948b22c634022c84d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2120,6 +2110,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048974703161480384, guid: 926b5966fe898b948b22c634022c84d3,
+        type: 3}
+      propertyPath: m_Name
+      value: baby-zero-head
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048974703161480384, guid: 926b5966fe898b948b22c634022c84d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 101439322251280732, guid: 926b5966fe898b948b22c634022c84d3,
         type: 3}
