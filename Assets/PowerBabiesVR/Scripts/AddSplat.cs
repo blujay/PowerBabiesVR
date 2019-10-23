@@ -65,7 +65,7 @@ public class AddSplat : MonoBehaviour
         splatParticles.Launch(hit.point, vfxColor);
         SoundCollectionOnImpact.Play(AudioSourceToPlay);
         //Instantiate(SpawnPrefabOnImpact, hit.point, hit.otherCollider.transform.rotation);
-        Invoke(nameof(DestroyMe), 0.2f);
+        //Invoke(nameof(DestroyMe), 0.2f);
     }
 
     private void DestroyMe()
