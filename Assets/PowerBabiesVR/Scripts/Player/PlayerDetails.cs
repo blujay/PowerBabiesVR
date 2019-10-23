@@ -46,10 +46,6 @@ public class PlayerDetails : RealtimeComponent
     private void OnModelSet()
     {
         _model.isReadyDidChange += OnPlayerReady;
-        if(_model.playerNumber==-1) {
-	        _model.playerNumber = (int) (UnityEngine.Random.value * 100); // Test
-	        Debug.LogWarning($"Assigned player #{model.playerNumber}");
-		}
     }
 
     private void OnPlayerReady(PlayerDetailsSyncModel model, bool value)
@@ -71,6 +67,11 @@ public class PlayerDetails : RealtimeComponent
 		if (hasModel && isLocal)
 		{
 			if (Input.GetKeyDown (KeyCode.Space)) _model.score += 2;
+			if(_model.playerNumber==-1) {
+				_model.playerNumber = (int) (UnityEngine.Random.value * 100); // Test
+				Debug.LogWarning($"Assigned player #{model.playerNumber}");
+			}
+
 		}
 	}
 
