@@ -23,13 +23,13 @@ public class PlayerDetails : RealtimeComponent
             {
                 DamageCollider.gameObject.layer = 14;
                 _model.name = Environment.UserName;
-                _model.playerNumber = GameStates.GetPlayerNumber();
 
 				if (GameStates.instance != null)
 				{
 					GameStates.instance.gameStateChanged += state =>
 					{
 						if (state == GameStates.States.Lobby) _model.score = 0;
+						_model.playerNumber = GameStates.GetPlayerNumber();
 					};
 				}
 				else
