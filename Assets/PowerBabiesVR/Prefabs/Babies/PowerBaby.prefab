@@ -112,8 +112,6 @@ GameObject:
   m_Component:
   - component: {fileID: 409054}
   - component: {fileID: 2326430}
-  - component: {fileID: 3390842}
-  - component: {fileID: 11451472}
   m_Layer: 0
   m_Name: PlayVolume
   m_TagString: Untagged
@@ -173,41 +171,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &3390842
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107460}
-  m_Mesh: {fileID: 0}
---- !u!114 &11451472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 107460}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0522eaef74d984591c060d05a095c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  borderThickness: -0.07
-  wireframeHeight: 2
-  drawWireframeWhenSelectedOnly: 0
-  drawInGame: 1
-  size: 0
-  color: {r: 0, g: 1, b: 1, a: 0.922}
-  vertices:
-  - {x: 1.0000002, y: 0.01, z: -1.0000002}
-  - {x: -1.0000002, y: 0.01, z: -1.0000002}
-  - {x: -1.0000002, y: 0.01, z: 1.0000002}
-  - {x: 1.0000002, y: 0.01, z: 1.0000002}
-  - {x: 0.93000025, y: 0.01, z: -0.93000025}
-  - {x: -0.93000025, y: 0.01, z: -0.93000025}
-  - {x: -0.93000025, y: 0.01, z: 0.93000025}
-  - {x: 0.93000025, y: 0.01, z: 0.93000025}
 --- !u!1 &107946
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +187,7 @@ GameObject:
   - component: {fileID: 809744661871206995}
   m_Layer: 0
   m_Name: PowerBaby
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,7 +261,7 @@ MonoBehaviour:
   ProjectileToGrab: {fileID: 8113405969329227649, guid: c1724f49481093247bd43840545f0cc4,
     type: 3}
   Cam: {fileID: 125964}
-  PlayerHeightRatio: 0.5
+  PlayerHeightRatio: 0.308
 --- !u!114 &925196840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +292,7 @@ MonoBehaviour:
   ProjectileToGrab: {fileID: 8113405969329227649, guid: eb02e60f3103f9349a101641fb89c561,
     type: 3}
   Cam: {fileID: 125964}
-  PlayerHeightRatio: 0.593
+  PlayerHeightRatio: 0.338
 --- !u!114 &809744661871206995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +310,7 @@ MonoBehaviour:
   ProjectileToGrab: {fileID: 8113405969329227649, guid: b2b591c9d8c08814497c18dc509d041a,
     type: 3}
   Cam: {fileID: 125964}
-  PlayerHeightRatio: 0.92
+  PlayerHeightRatio: 0.386
 --- !u!1 &109154
 GameObject:
   m_ObjectHideFlags: 0
