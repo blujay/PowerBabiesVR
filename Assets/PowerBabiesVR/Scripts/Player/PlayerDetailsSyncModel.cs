@@ -29,11 +29,9 @@ public partial class PlayerDetailsSyncModel : IModel {
         get { return _cache.LookForValueInCache(_isReady, entry => entry.isReadySet, entry => entry.isReady); }
         set { if (value == isReady) return; _cache.UpdateLocalCache(entry => { entry.isReadySet = true; entry.isReady = value; return entry; }); FireIsReadyDidChange(value); }
     }
-
-    public int playerNumber
-    {
-        get => _playerNumber;
-        set => _playerNumber = value;
+    public int playerNumber {
+        get { return _cache.LookForValueInCache(_playerNumber, entry => entry.playerNumberSet, entry => entry.playerNumber); }
+        set { if (value == playerNumber) return; _cache.UpdateLocalCache(entry => { entry.playerNumberSet = true; entry.playerNumber = value; return entry; });}
     }
 
     // Events
@@ -52,6 +50,8 @@ public partial class PlayerDetailsSyncModel : IModel {
         public int    score;
         public bool   isReadySet;
         public bool   isReady;
+        public bool   playerNumberSet;
+        public int    playerNumber;
     }
     
     private LocalChangeCache<LocalCacheEntry> _cache;
