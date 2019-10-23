@@ -10,7 +10,7 @@ public partial class PlayerDetailsSyncModel
 	private int _score;
     [RealtimeProperty(3, true, true)]
     private bool _isReady;
-    [RealtimeProperty(4, true, false)]
+    [RealtimeProperty(4, true, true)]
     private int _playerNumber = -1;
 }
 
@@ -31,7 +31,7 @@ public partial class PlayerDetailsSyncModel : IModel {
     }
     public int playerNumber {
         get { return _cache.LookForValueInCache(_playerNumber, entry => entry.playerNumberSet, entry => entry.playerNumber); }
-        set { if (value == playerNumber) return; _cache.UpdateLocalCache(entry => { entry.playerNumberSet = true; entry.playerNumber = value; return entry; });}
+        set { if (value == playerNumber) return; _cache.UpdateLocalCache(entry => { entry.playerNumberSet = true; entry.playerNumber = value; return entry; }); FirePlayerNumberDidChange(value); }
     }
 
     // Events
@@ -41,7 +41,9 @@ public partial class PlayerDetailsSyncModel : IModel {
     public event         ScoreDidChange scoreDidChange;
     public delegate void IsReadyDidChange(PlayerDetailsSyncModel model, bool value);
     public event         IsReadyDidChange isReadyDidChange;
-    
+    public delegate void PlayerNumberDidChange(PlayerDetailsSyncModel model, int value);
+    public event         PlayerNumberDidChange playerNumberDidChange;
+
     // Delta updates
     private struct LocalCacheEntry {
         public bool   nameSet;
@@ -85,7 +87,14 @@ public partial class PlayerDetailsSyncModel : IModel {
             Debug.LogException(exception);
         }
     }
-    
+    public void FirePlayerNumberDidChange(int value) {
+        try {
+            if (playerNumberDidChange != null)
+                playerNumberDidChange(this, value);
+        } catch (System.Exception exception) {
+            Debug.LogException(exception);
+        }
+    }
     // Serialization
     enum PropertyID {
         Name = 1,
