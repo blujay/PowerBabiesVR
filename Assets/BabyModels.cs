@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BabyModels : MonoBehaviour
 {
-
+    public Transform[] headModels;
     public Transform[] babyModels;
 //    private bool modelChosen;
 
@@ -24,6 +24,8 @@ public class BabyModels : MonoBehaviour
     {
         for (var i = 0; i < babyModels.Length; i++)
         {
+            var headModel = headModels[i];
+            headModel.gameObject.SetActive(i == modelNumber);
             var babyModel = babyModels[i];
             babyModel.gameObject.SetActive(i==modelNumber);
         }
