@@ -46,8 +46,10 @@ public class PlayerDetails : RealtimeComponent
     private void OnModelSet()
     {
         _model.isReadyDidChange += OnPlayerReady;
-        _model.playerNumber = (int) (UnityEngine.Random.value * 100); // Test
-        Debug.LogWarning($"Assigned player #{model.playerNumber}");
+        if(_model.playerNumber==-1) {
+	        _model.playerNumber = (int) (UnityEngine.Random.value * 100); // Test
+	        Debug.LogWarning($"Assigned player #{model.playerNumber}");
+		}
     }
 
     private void OnPlayerReady(PlayerDetailsSyncModel model, bool value)
