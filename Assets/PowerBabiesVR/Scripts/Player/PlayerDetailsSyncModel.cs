@@ -10,7 +10,7 @@ public partial class PlayerDetailsSyncModel
 	private int _score;
     [RealtimeProperty(3, true, true)]
     private bool _isReady;
-    [RealtimeProperty(4, true, true)]
+    [RealtimeProperty(4, true, false)]
     private int _playerNumber;
 }
 

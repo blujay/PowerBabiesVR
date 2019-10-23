@@ -29,7 +29,6 @@ public class PlayerDetails : RealtimeComponent
 					GameStates.instance.gameStateChanged += state =>
 					{
 						if (state == GameStates.States.Lobby) _model.score = 0;
-						_model.playerNumber = GameStates.GetPlayerNumber();
 					};
 				}
 				else
@@ -50,6 +49,8 @@ public class PlayerDetails : RealtimeComponent
 
     private void OnPlayerReady(PlayerDetailsSyncModel model, bool value)
     {
+	    model.playerNumber = GameStates.GetPlayerNumber();
+	    Debug.Log($"Assigned player #{model.playerNumber}");
         Debug.LogFormat("Checking if all players are ready state={0}", GameStates.instance.CurrentState);
         if (PlayerList.AllReady() && GameStates.instance) {
             GameStates.instance.CurrentState = GameStates.States.Game;
@@ -57,12 +58,12 @@ public class PlayerDetails : RealtimeComponent
         }
     }
 
-	private void OnDestroy ()
+	private void OnDestroy()
 	{
 		PlayerList.ForgetPlayer (this);
 	}
 
-	private void Update ()
+	private void Update()
 	{
 		if (hasModel && isLocal)
 		{
