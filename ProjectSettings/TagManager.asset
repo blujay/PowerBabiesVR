@@ -9,6 +9,7 @@ TagManager:
   - holonspace
   - splatproof
   - edible
+  - land
   layers:
   - Default
   - TransparentFX
