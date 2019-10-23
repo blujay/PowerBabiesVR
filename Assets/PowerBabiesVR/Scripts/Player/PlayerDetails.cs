@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 
 public class PlayerDetails : RealtimeComponent
@@ -29,7 +30,6 @@ public class PlayerDetails : RealtimeComponent
 					GameStates.instance.gameStateChanged += state =>
 					{
 						if (state == GameStates.States.Lobby) _model.score = 0;
-						_model.playerNumber = GameStates.GetPlayerNumber();
 					};
 				}
 				else
@@ -46,6 +46,10 @@ public class PlayerDetails : RealtimeComponent
     private void OnModelSet()
     {
         _model.isReadyDidChange += OnPlayerReady;
+        if(_model.playerNumber==-1) {
+	        _model.playerNumber = (int) (UnityEngine.Random.value * 100); // Test
+	        Debug.LogWarning($"Assigned player #{model.playerNumber}");
+		}
     }
 
     private void OnPlayerReady(PlayerDetailsSyncModel model, bool value)
@@ -57,12 +61,12 @@ public class PlayerDetails : RealtimeComponent
         }
     }
 
-	private void OnDestroy ()
+	private void OnDestroy()
 	{
 		PlayerList.ForgetPlayer (this);
 	}
 
-	private void Update ()
+	private void Update()
 	{
 		if (hasModel && isLocal)
 		{
