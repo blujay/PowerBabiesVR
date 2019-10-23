@@ -316,11 +316,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _realtime: {fileID: 0}
-  _sceneViewUUID: 
+  _sceneViewUUID: 4c349598dce1034bb4dbfbf919866d33
   _sceneViewOwnedByCreatingClient: 1
   _sceneViewPreventOwnershipTakeover: 0
   _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
-  _isRootPrefabView: 1
+  _isRootPrefabView: 0
   _components:
   - componentID: 1
     component: {fileID: 114800176784454794}
@@ -1542,7 +1542,7 @@ PrefabInstance:
     - target: {fileID: 5098962437342973851, guid: 744fe782f392a314db9cd84c9ccac4d5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.241
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5098962437342973851, guid: 744fe782f392a314db9cd84c9ccac4d5,
         type: 3}
@@ -2139,7 +2139,7 @@ PrefabInstance:
     - target: {fileID: 5098962437342973851, guid: 7bd7ff40c6fcf9545883f66888564525,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.241
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5098962437342973851, guid: 7bd7ff40c6fcf9545883f66888564525,
         type: 3}
@@ -2966,7 +2966,7 @@ PrefabInstance:
     - target: {fileID: 5098962437342973851, guid: 680e46e2a7b9d154687cb9cb93bb8de9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.241
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5098962437342973851, guid: 680e46e2a7b9d154687cb9cb93bb8de9,
         type: 3}
@@ -3524,7 +3524,7 @@ PrefabInstance:
     - target: {fileID: 5098962437342973851, guid: 3a92387d886020648a7eed5f5a189954,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.241
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5098962437342973851, guid: 3a92387d886020648a7eed5f5a189954,
         type: 3}
