@@ -345,7 +345,7 @@ MonoBehaviour:
   ElapsedTimeThreshold: 0.2
   SoundCollectionOnImpact: {fileID: 11400000, guid: f0be52e58ec3f754286180364d2c2cc3,
     type: 2}
-  SpawnPrefabOnImpact: {fileID: 5046693892075545885, guid: 92a98a3d502f47b45919b0a73b7c5a5d,
+  SpawnPrefabOnImpact: {fileID: 6133017666625963029, guid: d78898e9ebd9b3d469fb7f5c5f3ee644,
     type: 3}
   vfxColor: {r: 0.5283019, g: 0.2527292, b: 0.16696332, a: 1}
   MinScale: 0.2
