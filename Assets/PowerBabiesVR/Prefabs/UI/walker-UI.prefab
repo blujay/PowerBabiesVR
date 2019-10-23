@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1103312145629459565}
   - component: {fileID: 6141907743588637332}
+  - component: {fileID: 7034326868352102597}
+  - component: {fileID: 7693795755010084940}
   m_Layer: 0
-  m_Name: baby-zero-walker-UI
+  m_Name: walker-UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4417353678231967766}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.06850586, y: 0.639, z: 0.417}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -46,6 +48,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 7823150351000274173}
   playerDetails: {fileID: 0}
+--- !u!114 &7034326868352102597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417353678231967766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1011e140c5c34458f64fd8ad5095b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 0}
+  _sceneViewUUID: 
+  _sceneViewOwnedByCreatingClient: 1
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _isRootPrefabView: 1
+  _components:
+  - componentID: 1
+    component: {fileID: 0}
+    componentIDHasBeenUsed: 1
+  - componentID: 2
+    component: {fileID: 7693795755010084940}
+    componentIDHasBeenUsed: 1
+  _parentView: {fileID: 0}
+  _childViews: []
+--- !u!114 &7693795755010084940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4417353678231967766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9011f3ecfff6bca47b885e91ea7a6049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _syncPosition: 1
+  _syncRotation: 1
+  _syncScale: 1
+  _extrapolation: 0
 --- !u!1001 &5926581119413063606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53,11 +98,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1103312145629459565}
     m_Modifications:
-    - target: {fileID: 7196581871960251892, guid: 16c15cc6c8161b64c9b49caff864b9e0,
-        type: 3}
-      propertyPath: m_Name
-      value: Start Button
-      objectReference: {fileID: 0}
     - target: {fileID: 7196581871960251900, guid: 16c15cc6c8161b64c9b49caff864b9e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -113,35 +153,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3286707896425327825, guid: 16c15cc6c8161b64c9b49caff864b9e0,
+    - target: {fileID: 7196581871960251892, guid: 16c15cc6c8161b64c9b49caff864b9e0,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3286707896425327838, guid: 16c15cc6c8161b64c9b49caff864b9e0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3286707898350275842, guid: 16c15cc6c8161b64c9b49caff864b9e0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3286707898350275855, guid: 16c15cc6c8161b64c9b49caff864b9e0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445587044710848597, guid: 16c15cc6c8161b64c9b49caff864b9e0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303757957192889049, guid: 16c15cc6c8161b64c9b49caff864b9e0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Start Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16c15cc6c8161b64c9b49caff864b9e0, type: 3}
