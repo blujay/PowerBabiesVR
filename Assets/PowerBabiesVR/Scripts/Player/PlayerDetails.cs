@@ -76,6 +76,12 @@ public class PlayerDetails : RealtimeComponent
 		}
 	}
 
+	[ContextMenu("Test add to score")]
+	public void ScoreTest()
+	{
+		_model.score += 123;
+	}
+
 	private void OnTriggerEnter(Collider other)
     {
         if (_model == null)
