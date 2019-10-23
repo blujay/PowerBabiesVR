@@ -34,17 +34,25 @@ public class AddSplat : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (gameObject == null) return; //
+        Debug.Log("Splat Collision 1");
+        if (gameObject == null) return; // I may have been destroyed
+        Debug.Log("Splat Collision 2");
         ContactPoint hit = other.contacts[0];
         float velocity = hit.thisCollider.attachedRigidbody.velocity.magnitude;
         var splattee = hit.otherCollider.gameObject;
 
         if (velocity < VelocityThreshold) return;  // Don't splat on small bounces
+        Debug.Log("Splat Collision 3");
         if (Time.time - LastDecalTime < ElapsedTimeThreshold) return;  // Don't splat too often
+        Debug.Log("Splat Collision 4");
         if (splattee.GetComponent<Throwable>() != null) return;  // Don't splat other throwables
+        Debug.Log("Splat Collision 5");
         if (splattee.tag == "splatproof") return;  // Don't splat tagged objects
+        Debug.Log("Splat Collision 6");
         if (splattee.transform.root == myPowerBaby) return;  // Don't splat myself
+        Debug.Log("Splat Collision 7");
         if (splattee.transform.root == FindObjectOfType<RealtimeAvatarManager>().localAvatar.transform) return;  // Don't splat my own avatar
+        Debug.Log("Splat Collision 8!");
 
         LastDecalTime = Time.time;
         Decal decal = DecalSystem.GetDecal(
@@ -62,6 +70,7 @@ public class AddSplat : MonoBehaviour
 
     private void DestroyMe()
     {
+        Debug.Log("Splat Collision Destroyed");
         Realtime.Destroy(gameObject);
     }
 }
