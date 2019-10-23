@@ -6342,11 +6342,6 @@ PrefabInstance:
       propertyPath: m_SelectedEditorRenderState
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7520761300679899094, guid: a88cd2ab571346d44ab20865aaf681e7,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7520761300679899089, guid: a88cd2ab571346d44ab20865aaf681e7,
         type: 3}
       propertyPath: m_Tangents.Array.data[0].x
@@ -8267,6 +8262,21 @@ PrefabInstance:
       propertyPath: m_Tangents.Array.data[127].z
       value: NaN
       objectReference: {fileID: 0}
+    - target: {fileID: 7520761300679899094, guid: a88cd2ab571346d44ab20865aaf681e7,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808857108656423931, guid: a88cd2ab571346d44ab20865aaf681e7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286826739474416384, guid: a88cd2ab571346d44ab20865aaf681e7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a88cd2ab571346d44ab20865aaf681e7, type: 3}
 --- !u!4 &4140966971445122408 stripped
@@ -8477,16 +8487,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1156108745407799793, guid: b11ad153c6b7bca488178fb80207568f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156108745407799796, guid: b11ad153c6b7bca488178fb80207568f,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1156108745407799794, guid: b11ad153c6b7bca488178fb80207568f,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -8566,6 +8566,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectedVertices.Array.data[3]
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156108745407799793, guid: b11ad153c6b7bca488178fb80207568f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156108745407799796, guid: b11ad153c6b7bca488178fb80207568f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b11ad153c6b7bca488178fb80207568f, type: 3}
